@@ -1,10 +1,26 @@
+.content__img {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  right: 0;
+}
+
 .content {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   align-items: center;
   height: 100%;
+}
+
+.content__header_div {
+  margin: 8vw;
+}
+
+.content__h2 {
+  color: #4eb858;
+  font-size: 2rem;
 }
 
 .content__h1 {
