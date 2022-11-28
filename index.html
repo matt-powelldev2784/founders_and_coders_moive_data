@@ -12,10 +12,13 @@
     />
     <link href="stylesheets/main.css" rel="stylesheet" />
     <link href="stylesheets/header.css" rel="stylesheet" />
+    <link href="stylesheets/content.css" rel="stylesheet" />
     <link href="stylesheets/moive_nav.css" rel="stylesheet" />
     <script type="module" src="./js/main.js"></script>
   </head>
   <body>
+    <!--............................................-->
+    <!--............................................-->
     <header class="header__container">
       <img
         class="header__logo"
@@ -24,25 +27,60 @@
       />
       <nav class="nav__flexbox"></nav>
     </header>
-    <div class="background__image"></div>
-    <section class="main"></section>
+    <!--............................................-->
+    <!--............................................-->
+    <main class="main">
+      <section class="main__container">
+        <article class="content">
+          <h1 class="content__h1">
+            MOVIE PREVIEWS FOR <span class="content__h1_span">YOU</span>
+          </h1>
+        </article>
+      </section>
+    </main>
+    <!--............................................-->
+    <!--............................................-->
     <nav class="moive_nav">
       <div class="movie_nav__card_container">
         <article class="movie_nav__card">
-          <div class="movie_nav__img_container">
-            <img class="moive_nav__img" src="./img//01_the_darjeeling.jpg" />
-          </div>
+          <img class="moive_nav__img" src="./img//01_the_darjeeling.jpg" />
           <div class="moive_nav_info">
-            <p class="moive_nav__title">The Film Name Goes Here</p>
+            <a class="moive_nav__title"
+              >The Film Name Goes Here The Film Name Goes Here
+            </a>
             <p class="moive_nav__film_year">1984</p>
-            <button class="movie_nav__button">
-              <span class="movie_nav__button_icon">⯈</span>
-              Film Info
-            </button>
           </div>
         </article>
-        <article class="movie_nav__card"></article>
-        <article class="movie_nav__card"></article>
+        <article class="movie_nav__card">
+          <img class="moive_nav__img" src="./img//01_the_darjeeling.jpg" />
+          <div class="moive_nav_info">
+            <a class="moive_nav__title"> The Film Name Goes Here </a>
+            <p class="moive_nav__film_year">1984</p>
+          </div>
+        </article>
+        <article class="movie_nav__card">
+          <img class="moive_nav__img" src="./img//01_the_darjeeling.jpg" />
+          <div class="moive_nav_info">
+            <a class="moive_nav__title"> The Film Name Goes Here </a>
+            <p class="moive_nav__film_year">1984</p>
+          </div>
+        </article>
+        <article class="movie_nav__card">
+          <img class="moive_nav__img" src="./img//01_the_darjeeling.jpg" />
+          <div class="moive_nav_info">
+            <a class="moive_nav__title">
+              The Film Name Goes Here The Film Name Goes Here</a
+            >
+            <p class="moive_nav__film_year">1984</p>
+          </div>
+        </article>
+        <article class="movie_nav__card">
+          <img class="moive_nav__img" src="./img//01_the_darjeeling.jpg" />
+          <div class="moive_nav_info">
+            <a class="moive_nav__title"> The Film Name Goes Here</a>
+            <p class="moive_nav__film_year">1984</p>
+          </div>
+        </article>
       </div>
     </nav>
     <footer class="footer"></footer>

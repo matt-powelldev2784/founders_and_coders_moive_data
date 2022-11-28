@@ -2,8 +2,8 @@
   position: fixed;
   bottom: 0;
   width: 100vw;
-  height: 17rem;
-  background: #222222;
+  height: 20rem;
+  background: #12192c;
 }
 
 .movie_nav__card_container {
@@ -17,62 +17,44 @@
 .movie_nav__card {
   position: relative;
   display: block;
-  height: 15rem;
-  width: 30rem;
-  margin: 1rem;
-  background: #ff311c;
+  height: 20rem;
+  width: 20rem;
+  margin: 0rem 2rem;
   border-radius: 0.5rem;
 }
 
-.movie_nav__img_container {
-  position: absolute;
-  height: 100%;
-  width: 45%;
-}
-
 .moive_nav__img {
-  width: 100%;
-  height: 100%;
+  display: block;
+  clip-path: circle(50% at 50% 50%);
+  width: 12rem;
+  height: 12rem;
+  margin: 1rem auto;
   object-fit: cover;
 }
 
 .moive_nav_info {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 55%;
-  left: 45%;
+  top: 12rem;
+  width: 100%;
+  height: 7rem;
+  margin: 1rem auto;
 }
 
 .moive_nav__title {
+  display: block;
   text-align: center;
-  color: white;
-  font-size: 2rem;
+  max-width: 12rem;
+  max-height: 3.5rem;
+  color: #ceced8;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin: 1rem;
+  margin: 0.5rem auto;
 }
 
 .moive_nav__film_year {
   text-align: center;
-  color: white;
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin: 1rem;
-}
-
-.movie_nav__button {
-  display: block;
-  margin: 1rem auto;
-  padding: 0.5rem 1rem;
-  background-color: transparent;
-  border: 3px solid black;
-  color: black;
-  border-radius: 10px;
+  color: #565b6f;
+  font-size: 1.3rem;
   font-weight: 700;
-  font-size: 1.2rem;
-  line-height: 1.3rem;
-}
-
-.movie_nav__button_icon {
-  font-family: 'Noto Sans Symbols 2';
+  margin: 0.5rem;
 }

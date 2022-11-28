@@ -1,22 +1,7 @@
-.header__container {
-  width: 100vw;
-  background: #ff311c;
-  min-height: 3rem;
-}
-
 .header__logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   height: 3.2rem;
-  margin: 0.5rem 1.5rem;
-}
-
-.background__image {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.7),
-      rgba(7, 7, 7, 0.9)
-    ),
-    url('../img/moive_bg.jpg');
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
+  margin: 0rem 1.5rem;
 }
