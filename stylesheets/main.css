@@ -19,7 +19,6 @@ body {
   min-height: 100vh;
   width: 100%;
   height: 100%;
-  /* background: black; */
 }
 
 .header__container {
@@ -33,7 +32,7 @@ body {
 .main {
   position: absolute;
   background: #171e31;
-  height: calc(100% - 24rem);
+  height: calc(100% - 21rem);
   width: 100vw;
 }
 

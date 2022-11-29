@@ -2,8 +2,8 @@
   position: fixed;
   bottom: 0;
   width: 100vw;
-  height: 20rem;
-  background: #12192c;
+  height: 17rem;
+  background: #171e31;
 }
 
 .movie_nav__card_container {
@@ -17,24 +17,23 @@
 .movie_nav__card {
   position: relative;
   display: block;
-  height: 20rem;
+  height: 17rem;
   width: 20rem;
   margin: 0rem 2rem;
-  border-radius: 0.5rem;
 }
 
 .moive_nav__img {
   display: block;
   clip-path: circle(50% at 50% 50%);
-  width: 12rem;
-  height: 12rem;
+  width: 8rem;
+  height: 8rem;
   margin: 1rem auto;
   object-fit: cover;
 }
 
 .moive_nav_info {
   position: absolute;
-  top: 12rem;
+  top: 9rem;
   width: 100%;
   height: 7rem;
   margin: 1rem auto;
