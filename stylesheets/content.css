@@ -18,11 +18,12 @@
 
 .content__header_div {
   margin: 8vw;
+  max-width: 26rem;
 }
 
 .content__h2 {
   color: #4eb858;
-  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
 }
 
 .content__h1 {
@@ -30,7 +31,7 @@
   margin: 0 auto;
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 700;
-  max-width: 26rem;
+
   color: white;
 }
 

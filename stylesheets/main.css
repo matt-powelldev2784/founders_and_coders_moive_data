@@ -32,7 +32,7 @@ body {
 .main {
   position: absolute;
   background: #171e31;
-  height: calc(100% - 21rem);
+  height: calc(100% - 19.5rem);
   width: 100vw;
 }
 
