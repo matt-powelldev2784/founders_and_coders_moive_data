@@ -14,6 +14,7 @@
     <link href="stylesheets/header.css" rel="stylesheet" />
     <link href="stylesheets/content.css" rel="stylesheet" />
     <link href="stylesheets/moive_nav.css" rel="stylesheet" />
+    <link href="stylesheets/form.css" rel="stylesheet" />
     <script type="module" src="./js/main.js"></script>
   </head>
   <body>
@@ -25,7 +26,12 @@
         src="./img/movie_databse_logo6.svg"
         alt="Movie Database Logo"
       />
-      <nav class="nav__flexbox"></nav>
+      <nav class="nav__flexbox">
+        <div class="nav__buttton_container" id="add_moive">
+          <img class="nav__button_icon" src="./img/add.svg" />
+          <p class="nav__button_text">Add Moive</p>
+        </div>
+      </nav>
     </header>
     <!--............................................-->
     <!--............................................-->
@@ -36,13 +42,98 @@
         alt="movie clapper board and light"
       />
       <section class="main__container">
-        <article class="content">
+        <article class="content__flexbox">
           <div class="content__header_div">
             <h1 class="content__h1">
               MOVIE PREVIEWS FOR <span class="content__h1_span">YOU</span>
             </h1>
             <h2 class="content__h2">Browse the latest movies below...</h2>
           </div>
+          <!--............................................-->
+          <!--............................................-->
+          <form class="form__container" id="form">
+            <img class="form_play_img" src="./img/play.svg" alt="Play Icon" />
+            <h2 class="form__h2">Add Movie To Database</h2>
+            <!--............................................-->
+            <div class="form_input__container">
+              <div class="form_input__error" id="form__error_title"></div>
+              <input
+                type="text"
+                class="form_input__text"
+                name="title"
+                placeholder="Title"
+              />
+            </div>
+            <!--............................................-->
+            <!--............................................-->
+            <div class="form__small_wrapper">
+              <div class="form_input__container_small">
+                <div class="form_input__error" id="form__error_year"></div>
+                <input
+                  type="text"
+                  class="form_input__text_small"
+                  name="year"
+                  placeholder="Year"
+                />
+              </div>
+              <!--............................................-->
+              <div class="form_input__container_small">
+                <div class="form_input__error" id="form__error_rating"></div>
+                <input
+                  type="text"
+                  class="form_input__text_small"
+                  name="rating"
+                  placeholder="Rating"
+                />
+              </div>
+              <!--............................................-->
+              <div class="form_input__container_small">
+                <div class="form_input__error" id="form__error_runtime"></div>
+                <input
+                  type="text"
+                  class="form_input__text_small"
+                  name="runtime"
+                  placeholder="Run Time"
+                />
+              </div>
+            </div>
+            <!--............................................-->
+            <!--............................................-->
+            <div class="form_input__container">
+              <div class="form_input__error" id="form__error_plot"></div>
+              <textarea
+                type="text"
+                class="form_input__textarea"
+                name="plot"
+                placeholder="Plot"
+              ></textarea>
+            </div>
+            <!--............................................-->
+            <div class="form_input__container">
+              <input class="form__add_cast_button" type="button" value="+" />
+              <div class="form_input__error" id="form__error_cast"></div>
+              <input
+                type="text"
+                class="form_input__text"
+                name="cast"
+                placeholder="Cast"
+              />
+            </div>
+            <!--............................................-->
+            <div class="form_input__container">
+              <div class="form_input__error" id="form__error_image"></div>
+              <input
+                type="file"
+                id="form__image_upload"
+                accept="image/jpeg, image/png, image/jpg"
+                class="form_input__text"
+                name="image"
+                placeholder="Upload Image"
+              />
+            </div>
+            <!--............................................-->
+            <input class="form__submit_button" type="submit" value="Submit" />
+          </form>
         </article>
       </section>
     </main>

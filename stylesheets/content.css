@@ -7,16 +7,18 @@
   transform: translateY(-50%);
 }
 
-.content {
+.content__flexbox {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   height: 100%;
+  overflow: scroll;
 }
 
 .content__header_div {
+  display: block;
   margin: 8vw;
   max-width: 26rem;
 }

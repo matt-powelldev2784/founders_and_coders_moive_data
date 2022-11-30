@@ -1,4 +1,15 @@
+export const emptyMovieNav = () => {
+  const currentMoives = document.getElementsByClassName('movie_nav__card')
+  const currentMoivesArray = [...currentMoives]
+
+  currentMoivesArray.forEach((element) => {
+    element.remove()
+  })
+}
+
 export const renderMovieNav = (movies) => {
+  emptyMovieNav()
+
   movies.forEach((movie) => {
     const { key, title, year, image } = movie
 
@@ -14,6 +25,7 @@ export const renderMovieNav = (movies) => {
     //create image node
     const img = document.createElement('img')
     img.classList.add('moive_nav__img')
+    img.setAttribute('id', `moive_nav__img_${key}`)
     img.setAttribute('src', image)
     img.setAttribute('alt', `Moive Image ${title}`)
 

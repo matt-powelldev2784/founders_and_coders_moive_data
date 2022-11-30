@@ -5,3 +5,31 @@
   height: 2rem;
   margin: 0rem 1.5rem;
 }
+
+.nav__flexbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+  padding: 0.5rem;
+  float: right;
+}
+
+.nav__buttton_container {
+  height: 2rem;
+}
+
+.nav__button_icon {
+  height: 2rem;
+}
+
+.nav__button_text {
+  display: inline-block;
+  height: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.2rem;
+  color: white;
+}
