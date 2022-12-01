@@ -12,7 +12,7 @@ export const addEventListeners = () => {
 
   const hideMoiveBrowser = document.getElementById('hide_moive_browser')
   hideMoiveBrowser.addEventListener('click', () => {
-    toggleNode(movieNavNode, true)
+    toggleNode(movieNavNode, false)
   })
 
   const form = document.querySelector('form')
