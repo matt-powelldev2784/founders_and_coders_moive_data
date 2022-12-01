@@ -9,7 +9,7 @@ export const formNode = [
 
 export const contentTitle = [
   {
-    element: document.getElementsByClassName('content__header_div')[0],
+    element: document.getElementsByClassName('home__header_div')[0],
     cssKey: 'display',
     displayStyle: 'block',
     hideStyle: 'none',

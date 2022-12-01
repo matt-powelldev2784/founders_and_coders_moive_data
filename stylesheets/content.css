@@ -7,7 +7,7 @@
   transform: translateY(-50%);
 }
 
-.content__flexbox {
+.home__flexbox {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -17,18 +17,18 @@
   overflow: scroll;
 }
 
-.content__header_div {
+.home__header_div {
   display: block;
   margin: 8vw;
   max-width: 26rem;
 }
 
-.content__h2 {
+.home__h2 {
   color: #4eb858;
   font-size: clamp(1.4rem, 2vw, 1.8rem);
 }
 
-.content__h1 {
+.home__h1 {
   display: block;
   margin: 0 auto;
   font-size: clamp(3rem, 6vw, 5rem);
@@ -37,7 +37,7 @@
   color: white;
 }
 
-.content__h1_span {
+.home__h1_span {
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 700;
   color: #4eb858;
