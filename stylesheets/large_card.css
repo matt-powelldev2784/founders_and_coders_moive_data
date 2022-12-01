@@ -1,0 +1,14 @@
+.large_card {
+  width: 100%;
+  height: 100%;
+}
+
+.large_card__img_container {
+  width: 50%;
+  height: 100%;
+  float: right;
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+  background-image: url(../img/02_the_royal_tenenbaums.jpg);
+  background-size: cover;
+  background-position: top;
+}

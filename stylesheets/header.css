@@ -19,6 +19,7 @@
 
 .nav__buttton_container {
   height: 2rem;
+  cursor: pointer;
 }
 
 .nav__button_icon {

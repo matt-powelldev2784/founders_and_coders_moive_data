@@ -1,8 +1,6 @@
 import { cleanMovieData } from './movieData.js'
-import { renderMovieNav } from './renderMovieNav.js'
-import { addFormEventListener } from './eventListeners/addFormEventListener.js'
-import { addNavEventListeners } from './eventListeners/navEventListeners.js'
+import { renderMovieNav } from './helpers/renderMovieNav.js'
+import { addEventListeners } from './eventListeners.js'
 
 renderMovieNav(cleanMovieData)
-addNavEventListeners()
-addFormEventListener()
+addEventListeners()
