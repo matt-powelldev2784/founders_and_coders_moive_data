@@ -6,7 +6,9 @@ const classProps = {
   mainFullScreen: { id: 'main', display: false, append: '__fullscreen' },
   mainHalfScreen: { id: 'main', display: true, append: '__fullscreen' },
   hidehomeImage: { id: 'home__bg_img', display: false, append: '_HIDE' },
+  displayhomeImage: { id: 'home__bg_img', display: true, append: '_HIDE' },
   hideHomeFlexbox: { id: 'home__flexbox', display: false, append: '_HIDE' },
+  displayHomeFlexbox: { id: 'home__flexbox', display: true, append: '_HIDE' },
 }
 
 export const {
@@ -17,5 +19,7 @@ export const {
   mainFullScreen,
   mainHalfScreen,
   hidehomeImage,
+  displayhomeImage,
   hideHomeFlexbox,
+  displayHomeFlexbox,
 } = classProps

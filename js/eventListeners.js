@@ -4,6 +4,7 @@ import {
   mainFullScreen,
   hideMovieNav,
   hidehomeImage,
+  displayHomeFlexbox,
 } from './toogleNodes/classProps.js'
 import { onFormSubmit } from './helpers/onFormSubmit.js'
 import { renderMoiveInfo } from './helpers/renderMovieInfo.js'
@@ -13,9 +14,10 @@ export const addEventListeners = () => {
   const addMovie = document.getElementById('add_moive')
   addMovie.addEventListener('click', () => {
     removeMovieInfoNode()
-    toggleClass(displayForm)
+    toggleClass(displayHomeFlexbox)
     toggleClass(hideMovieNav)
     toggleClass(mainFullScreen)
+    toggleClass(displayForm)
     toggleClass(hidehomeImage)
   })
 
