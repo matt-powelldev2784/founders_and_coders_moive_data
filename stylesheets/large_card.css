@@ -9,11 +9,6 @@
   width: 50%;
   height: 100%;
   float: right;
-  /* clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%); */
-  /* background-image: linear-gradient(to left, rgb(23, 30, 49, 0.1), #171e31),
-    url(../img//03_fantastic_mr_fox.jpg); */
-  /* background-image: linear-gradient(to left, transparent, #171e31),
-    url(../img//03_fantastic_mr_fox.jpg); */
   background-image: linear-gradient(to left, transparent, #171e31),
     url(../img/04_budapest_hotel.jpg);
   background-size: cover;
@@ -26,16 +21,23 @@
   height: 100%;
 }
 
-.large_card__text_box {
-  width: 80%;
-  height: 60%;
-  margin: 20% auto;
+.large_card__text_flex_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 92%;
+  transform: translate(-50%, -50%);
+}
+
+.large_card__text_flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .large_card__h1 {
-  font-size: 2rem;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 1rem;
   text-align: justify;
   text-justify: inter-character;
@@ -51,34 +53,34 @@
 
 .large_card__year {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding: 1rem;
   color: white;
 }
 
 .large_card__rating {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding: 1rem;
   color: white;
 }
 
 .large_card__runtime {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding: 1rem;
   color: white;
 }
 
 .large_card__plot {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-align: center;
   padding: 1rem 1rem;
-  color: white;
+  color: #565b6f;
 }
 
 .large_card__cast {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   padding: 1rem;
   color: white;

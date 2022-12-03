@@ -1,7 +1,7 @@
 import { cleanMovieData } from '../movieData.js'
-import { renderMovieNav } from './renderMovieNav.js'
 import { toggleNode } from '../toogleNodes/toggleNode.js'
 import { movieNavNode, formNode } from '../toogleNodes/nodeProps.js'
+import { injectUploadedImage } from './injectUploadedImage.js'
 
 export const onFormSubmit = (event) => {
   event.preventDefault()
@@ -24,24 +24,7 @@ export const onFormSubmit = (event) => {
   newMovie.key = key
 
   cleanMovieData.unshift(newMovie)
-  renderMovieNav(cleanMovieData)
-  injectUploadedImage(`moive_nav__img_${key}`)
+  injectUploadedImage()
   toggleNode(movieNavNode, true)
   toggleNode(formNode, false)
-}
-
-const injectUploadedImage = (imageId) => {
-  const file = document.getElementById('form__image_upload').files[0]
-  const image = document.getElementById(imageId)
-  const reader = new FileReader()
-
-  reader.onloadend = () => {
-    image.src = reader.result
-  }
-
-  if (file) {
-    reader.readAsDataURL(file)
-  } else {
-    preview.src = ''
-  }
 }
