@@ -36,6 +36,13 @@ body {
   width: 100vw;
 }
 
+.main__fullscreen {
+  position: absolute;
+  background: #171e31;
+  height: calc(100% - 4rem);
+  width: 100vw;
+}
+
 .main__container {
   position: relative;
   display: block;

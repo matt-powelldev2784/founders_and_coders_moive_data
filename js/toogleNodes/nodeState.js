@@ -1,3 +1,0 @@
-const nodeState = {
-  moiveBorwserIsDisplayed: true,
-}

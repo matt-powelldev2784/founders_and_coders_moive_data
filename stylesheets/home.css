@@ -1,10 +1,13 @@
-.content__img {
+.home__bg_img {
   position: absolute;
   width: auto;
   height: 80%;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+}
+.home__bg_img_HIDE {
+  display: none;
 }
 
 .home__flexbox {
@@ -15,6 +18,9 @@
   align-items: center;
   height: 100%;
   overflow: scroll;
+}
+.home__flexbox_HIDE {
+  display: none;
 }
 
 .home__header_div {

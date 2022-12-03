@@ -6,6 +6,9 @@
   height: 15.5rem;
   background: #171e31;
 }
+.moive_nav_HIDE {
+  display: none;
+}
 
 .movie_nav__card_container {
   display: flex;

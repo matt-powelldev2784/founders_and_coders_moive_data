@@ -1,11 +1,16 @@
 import { cleanMovieData } from '../movieData.js'
-import { toggleNode } from '../toogleNodes/toggleNode.js'
-import { movieNavNode, formNode } from '../toogleNodes/nodeProps.js'
+import { toggleClass } from '../toogleNodes/toogleClass.js'
+import {
+  displayMovieNav,
+  hideForm,
+  mainHalfScreen,
+} from '../toogleNodes/classProps.js'
 import { injectUploadedImage } from './injectUploadedImage.js'
 
 export const onFormSubmit = (event) => {
   event.preventDefault()
-  const formElements = [...form.elements]
+  const form = document.getElementById('form')
+  const formElements = [...form__container.elements]
 
   const newMovieData = formElements.map((element) => {
     const key = element.name
@@ -25,6 +30,7 @@ export const onFormSubmit = (event) => {
 
   cleanMovieData.unshift(newMovie)
   injectUploadedImage()
-  toggleNode(movieNavNode, true)
-  toggleNode(formNode, false)
+  toggleClass(hideForm)
+  toggleClass(displayMovieNav)
+  toggleClass(mainHalfScreen)
 }

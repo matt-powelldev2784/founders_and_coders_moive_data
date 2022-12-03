@@ -1,5 +1,10 @@
-import { toggleNode } from './toogleNodes/toggleNode.js'
-import { movieNavNode, formNode, homeTitle } from './toogleNodes/nodeProps.js'
+import { toggleClass } from './toogleNodes/toogleClass.js'
+import {
+  displayForm,
+  mainFullScreen,
+  hideMovieNav,
+  hidehomeImage,
+} from './toogleNodes/classProps.js'
 import { onFormSubmit } from './helpers/onFormSubmit.js'
 import { renderMoiveInfo } from './helpers/renderMovieInfo.js'
 import { removeMovieInfoNode } from './helpers/renderMovieInfo.js'
@@ -8,14 +13,16 @@ export const addEventListeners = () => {
   const addMovie = document.getElementById('add_moive')
   addMovie.addEventListener('click', () => {
     removeMovieInfoNode()
-    toggleNode(movieNavNode, false)
-    toggleNode(formNode, true)
-    toggleNode(homeTitle, true)
+    toggleClass(displayForm)
+    toggleClass(hideMovieNav)
+    toggleClass(mainFullScreen)
+    toggleClass(hidehomeImage)
   })
 
   const hideMoiveBrowser = document.getElementById('hide_moive_browser')
   hideMoiveBrowser.addEventListener('click', () => {
-    toggleNode(movieNavNode, false)
+    toggleClass(hideMovieNav)
+    toggleClass(mainFullScreen)
   })
 
   const form = document.querySelector('form')
