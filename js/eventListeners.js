@@ -9,6 +9,7 @@ import {
 import { onFormSubmit } from './helpers/onFormSubmit.js'
 import { renderMoiveInfo } from './helpers/renderMovieInfo.js'
 import { removeMovieInfoNode } from './helpers/renderMovieInfo.js'
+import { navigationLeft, navigationRight } from './helpers/navigation.js'
 
 export const addEventListeners = () => {
   const addMovie = document.getElementById('add_moive')
@@ -27,8 +28,14 @@ export const addEventListeners = () => {
     toggleClass(mainFullScreen)
   })
 
-  const form = document.querySelector('form')
+  const form = document.getElementById('form__container')
   form.addEventListener('submit', onFormSubmit)
+
+  const movieNavLeft = document.getElementById('moive_nav__left')
+  movieNavLeft.addEventListener('click', navigationLeft)
+
+  const movieNavRight = document.getElementById('moive_nav__right')
+  movieNavRight.addEventListener('click', navigationRight)
 
   refreshMoviesNavEventListeners()
 }
