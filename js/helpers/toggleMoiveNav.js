@@ -10,8 +10,6 @@ export const toggleMovieNav = () => {
   const button = document.getElementById('nav__button_text')
   const buttonClass = button.classList[1]
   const icon = document.getElementById('nav__button_icon__hide')
-  console.log('button', button)
-  console.log('buttonClass', buttonClass)
 
   const displayHideButton = () => {
     button.firstChild.remove()
