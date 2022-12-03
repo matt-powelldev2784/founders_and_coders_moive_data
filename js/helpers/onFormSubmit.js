@@ -5,15 +5,14 @@ import {
   hideForm,
   mainHalfScreen,
   displayhomeImage,
+  displayMoiveBrowserBtn,
 } from '../toogleNodes/classProps.js'
 import { injectUploadedImage } from './injectUploadedImage.js'
 
 export const onFormSubmit = (event) => {
   event.preventDefault()
-
-  const formElements = [...form__container.elements]
-  formElements.splice(5, 1)
-  formElements.splice(7, 1)
+  const formContainer = document.getElementById('form__container')
+  const formElements = [...formContainer.elements]
 
   const newMovieData = formElements.map((element) => {
     const key = element.name
@@ -33,8 +32,10 @@ export const onFormSubmit = (event) => {
 
   cleanMovieData.unshift(newMovie)
   injectUploadedImage()
+  formContainer.reset()
   toggleClass(hideForm)
   toggleClass(displayMovieNav)
   toggleClass(mainHalfScreen)
   toggleClass(displayhomeImage)
+  toggleClass(displayMoiveBrowserBtn)
 }

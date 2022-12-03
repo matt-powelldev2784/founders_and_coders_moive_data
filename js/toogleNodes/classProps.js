@@ -9,6 +9,16 @@ const classProps = {
   displayhomeImage: { id: 'home__bg_img', display: true, append: '_HIDE' },
   hideHomeFlexbox: { id: 'home__flexbox', display: false, append: '_HIDE' },
   displayHomeFlexbox: { id: 'home__flexbox', display: true, append: '_HIDE' },
+  hideMoiveBrowserBtn: {
+    id: 'toggle_movie_browser',
+    display: false,
+    append: '_HIDE',
+  },
+  displayMoiveBrowserBtn: {
+    id: 'toggle_movie_browser',
+    display: true,
+    append: '_HIDE',
+  },
 }
 
 export const {
@@ -22,4 +32,6 @@ export const {
   displayhomeImage,
   hideHomeFlexbox,
   displayHomeFlexbox,
+  hideMoiveBrowserBtn,
+  displayMoiveBrowserBtn,
 } = classProps

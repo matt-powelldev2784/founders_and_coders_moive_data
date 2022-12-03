@@ -23,6 +23,18 @@
   cursor: pointer;
 }
 
+.toggle_movie_browser {
+  display: block;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.toggle_movie_browser_HIDE {
+  display: none;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
 .nav__button_icon {
   height: 1.5rem;
   margin: 0 0.25rem;

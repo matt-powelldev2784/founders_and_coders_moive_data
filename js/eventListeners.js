@@ -5,6 +5,7 @@ import {
   hideMovieNav,
   hidehomeImage,
   displayHomeFlexbox,
+  hideMoiveBrowserBtn,
 } from './toogleNodes/classProps.js'
 import { toggleMovieNav } from './helpers/toggleMoiveNav.js'
 import { onFormSubmit } from './helpers/onFormSubmit.js'
@@ -21,6 +22,7 @@ export const addEventListeners = () => {
     toggleClass(mainFullScreen)
     toggleClass(displayForm)
     toggleClass(hidehomeImage)
+    toggleClass(hideMoiveBrowserBtn)
   })
 
   const toggleMoiveBrowser = document.getElementById('toggle_movie_browser')
