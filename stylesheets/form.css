@@ -64,6 +64,16 @@
 }
 
 .form_input__number {
+  display: block;
+  border: none;
+  background: #171e31;
+  width: 80%;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.8rem;
   appearance: textfield;
   -moz-appearance: textfield;
 }
@@ -75,6 +85,17 @@
 .form_input__textarea {
   resize: none;
   overflow: scroll;
+}
+
+.form_input__note {
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: grey;
+  font-size: 0.8rem;
 }
 
 .form__submit_button {
