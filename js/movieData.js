@@ -39,7 +39,7 @@ const movieData = {
 }
 
 const movieDataArray = Object.entries(movieData)
-export const cleanMovieData = []
+export let cleanMovieData = []
 
 movieDataArray.forEach((movie, key) => {
   const cleanMovie = {
@@ -54,3 +54,7 @@ movieDataArray.forEach((movie, key) => {
   }
   cleanMovieData.push(cleanMovie)
 })
+
+export const setCleanMoiveData = (movieData) => {
+  cleanMovieData = movieData
+}

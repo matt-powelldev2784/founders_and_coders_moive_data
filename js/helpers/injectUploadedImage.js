@@ -1,6 +1,7 @@
 import { cleanMovieData } from '../movieData.js'
 import { renderMovieNav } from './renderMovieNav.js'
 import { refreshMoviesNavEventListeners } from '../eventListeners.js'
+import { addDatatoStorage } from './storage.js'
 
 export const injectUploadedImage = () => {
   const file = document.getElementById('form__image_upload').files[0]
@@ -10,6 +11,7 @@ export const injectUploadedImage = () => {
     cleanMovieData[0].image = reader.result
     renderMovieNav(cleanMovieData)
     refreshMoviesNavEventListeners()
+    addDatatoStorage()
   }
 
   if (file) {
