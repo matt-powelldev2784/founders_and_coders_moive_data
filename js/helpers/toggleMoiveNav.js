@@ -9,6 +9,7 @@ import {
 export const toggleMovieNav = () => {
   const button = document.getElementById('nav__button_text')
   const buttonClass = button.classList[1]
+  const icon = document.getElementById('nav__button_icon__hide')
   console.log('button', button)
   console.log('buttonClass', buttonClass)
 
@@ -20,6 +21,7 @@ export const toggleMovieNav = () => {
     toggleClass(mainFullScreen)
     button.classList.remove('hide')
     button.classList.add('show')
+    icon.src = './img/show.svg'
   }
 
   const displayShowButton = () => {
@@ -30,6 +32,7 @@ export const toggleMovieNav = () => {
     toggleClass(mainHalfScreen)
     button.classList.remove('show')
     button.classList.add('hide')
+    icon.src = './img/hide.svg'
   }
 
   if (buttonClass === 'hide') {
