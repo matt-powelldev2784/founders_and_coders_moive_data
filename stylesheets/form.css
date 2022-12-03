@@ -63,6 +63,11 @@
   padding: 0.8rem;
 }
 
+.form_input__number {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
 .form_input__text_small {
   font-size: 1.1rem;
 }

@@ -16,22 +16,9 @@ export const injectUploadedImage = () => {
 
   if (file) {
     reader.readAsDataURL(file)
+  } else {
+    renderMovieNav(cleanMovieData)
+    refreshMoviesNavEventListeners()
+    addDatatoStorage()
   }
 }
-
-// export const injectUploadedImage = (imageId) => {
-//   const file = document.getElementById('form__image_upload').files[0]
-//   const image = document.getElementById(imageId)
-//   const reader = new FileReader()
-
-//   reader.onloadend = () => {
-//     console.log('reader.result', reader.result)
-//     image.src = reader.result
-//   }
-
-//   if (file) {
-//     reader.readAsDataURL(file)
-//   } else {
-//     preview.src = ''
-//   }
-// }

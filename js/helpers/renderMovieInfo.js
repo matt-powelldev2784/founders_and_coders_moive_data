@@ -26,7 +26,7 @@ export const renderMoiveInfo = (event) => {
   const movie = findMoive[0]
   const { key, plot, runtime, year, image } = movie
   const title = movie.title.toUpperCase()
-  const rating = Math.round(movie.rating) / 2
+  const rating = parseInt(Math.round(movie.rating / 2))
   const cast = movie.cast.join(', ')
 
   //create article node
@@ -53,6 +53,16 @@ export const renderMoiveInfo = (event) => {
   h1.classList.add('large_card__h1')
   const h1text = document.createTextNode(title)
   h1.appendChild(h1text)
+
+  //create stars node
+  const starContainer = document.createElement('div')
+  starContainer.classList.add('large_card__star_container')
+  const numberOfStars = Array(rating).fill('star')
+  numberOfStars.forEach(() => {
+    const star = document.createElement('div')
+    star.classList.add('large_card__star')
+    starContainer.appendChild(star)
+  })
 
   //create details flexbox
   const detailsFlexbox = document.createElement('div')
@@ -93,6 +103,7 @@ export const renderMoiveInfo = (event) => {
   textContainer.appendChild(flexConatiner)
   flexConatiner.appendChild(textBox)
   textBox.appendChild(h1)
+  textBox.appendChild(starContainer)
   textBox.appendChild(detailsFlexbox)
   textBox.appendChild(plotNode)
   textBox.appendChild(castNode)

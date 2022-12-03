@@ -4,17 +4,20 @@ import {
   displayMovieNav,
   hideForm,
   mainHalfScreen,
+  displayhomeImage,
 } from '../toogleNodes/classProps.js'
 import { injectUploadedImage } from './injectUploadedImage.js'
 
 export const onFormSubmit = (event) => {
   event.preventDefault()
-  const form = document.getElementById('form')
+
   const formElements = [...form__container.elements]
+  formElements.splice(5, 1)
+  formElements.splice(7, 1)
 
   const newMovieData = formElements.map((element) => {
     const key = element.name
-    const value = element.value
+    const value = element.value.trim()
 
     if (key === 'cast') {
       const value = element.value.split(',')
@@ -33,4 +36,5 @@ export const onFormSubmit = (event) => {
   toggleClass(hideForm)
   toggleClass(displayMovieNav)
   toggleClass(mainHalfScreen)
+  toggleClass(displayhomeImage)
 }

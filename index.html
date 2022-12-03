@@ -85,6 +85,7 @@
                 class="form_input__text"
                 name="title"
                 placeholder="Title"
+                required="required"
               />
             </div>
             <!--............................................-->
@@ -93,30 +94,37 @@
               <div class="form_input__container_small">
                 <div class="form_input__error" id="form__error_year"></div>
                 <input
-                  type="text"
-                  class="form_input__text_small"
+                  type="number"
+                  class="form_input__text_small form_input__number"
                   name="year"
                   placeholder="Year"
+                  required="required"
                 />
               </div>
               <!--............................................-->
               <div class="form_input__container_small">
                 <div class="form_input__error" id="form__error_rating"></div>
                 <input
-                  type="text"
-                  class="form_input__text_small"
+                  type="number"
+                  class="form_input__text_small form_input__number"
                   name="rating"
                   placeholder="Rating"
+                  required="required"
+                  min="1"
+                  max="10"
                 />
               </div>
               <!--............................................-->
               <div class="form_input__container_small">
                 <div class="form_input__error" id="form__error_runtime"></div>
                 <input
-                  type="text"
-                  class="form_input__text_small"
+                  type="number"
+                  class="form_input__text_small form_input__number"
                   name="runtime"
                   placeholder="Run Time"
+                  required="required"
+                  min="1"
+                  max="999"
                 />
               </div>
             </div>
@@ -129,6 +137,7 @@
                 class="form_input__textarea"
                 name="plot"
                 placeholder="Plot"
+                required="required"
               ></textarea>
             </div>
             <!--............................................-->
@@ -140,6 +149,7 @@
                 class="form_input__text"
                 name="cast"
                 placeholder="Cast"
+                required="required"
               />
             </div>
             <!--............................................-->
@@ -152,6 +162,7 @@
                 class="form_input__text"
                 name="image"
                 placeholder="Upload Image"
+                required="required"
               />
             </div>
             <!--............................................-->
