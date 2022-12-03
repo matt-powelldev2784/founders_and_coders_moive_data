@@ -1,6 +1,18 @@
 import { cleanMovieData } from '../movieData.js'
+import { toggleNode } from '../toogleNodes/toggleNode.js'
+import { homeTitle } from '../toogleNodes/nodeProps.js'
+
+export const removeMovieInfoNode = () => {
+  const movieNode = document.getElementsByClassName('large_card')[0]
+  if (movieNode) {
+    movieNode.remove()
+  }
+}
 
 export const renderMoiveInfo = (event) => {
+  removeMovieInfoNode()
+  toggleNode(homeTitle, false)
+
   const targetId = event.currentTarget.id
   const regEx = /\d+/
   const movieKey = parseInt(targetId.match(regEx)[0])
@@ -15,9 +27,6 @@ export const renderMoiveInfo = (event) => {
   const title = movie.title.toUpperCase()
   const rating = Math.round(movie.rating) / 2
   const cast = movie.cast.join(', ')
-
-  console.log('movie', movie)
-  console.log('cast', cast)
 
   //create article node
   const articleNode = document.createElement('article')

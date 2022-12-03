@@ -7,9 +7,15 @@ export const formNode = [
   },
 ]
 
-export const contentTitle = [
+export const homeTitle = [
   {
-    element: document.getElementsByClassName('home__header_div')[0],
+    element: document.getElementsByClassName('home__flexbox')[0],
+    cssKey: 'display',
+    displayStyle: 'flex',
+    hideStyle: 'none',
+  },
+  {
+    element: document.getElementsByClassName('content__img')[0],
     cssKey: 'display',
     displayStyle: 'block',
     hideStyle: 'none',
