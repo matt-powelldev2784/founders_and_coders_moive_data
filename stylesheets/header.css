@@ -34,3 +34,21 @@
   padding: 0.2rem;
   color: white;
 }
+
+.nav__button_text__hide_browser {
+  display: inline-block;
+  height: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.2rem;
+  color: white;
+}
+
+.nav__button_text__show_browser {
+  display: inline-block;
+  height: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.2rem;
+  color: white;
+}

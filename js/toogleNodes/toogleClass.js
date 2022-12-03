@@ -5,11 +5,5 @@ export const toggleClass = ({ id, display, append }) => {
   const appendClass = id + append
   element.classList.remove(appendClass)
 
-  if (display) {
-    element.classList.add(id)
-  }
-
-  if (!display) {
-    element.classList.add(appendClass)
-  }
+  display ? element.classList.add(id) : element.classList.add(appendClass)
 }
