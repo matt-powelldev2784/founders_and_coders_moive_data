@@ -11,7 +11,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   height: 100%;
   padding: 0.5rem;
   float: right;
@@ -20,11 +20,23 @@
 
 .nav__buttton_container {
   height: 1.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.nav_sort__year_button {
+  top: 4rem;
+  border: none;
+  background: none;
+  height: 1.5rem;
   cursor: pointer;
 }
 
 .toggle_movie_browser {
   display: block;
+  border: none;
+  background: none;
   height: 1.5rem;
   cursor: pointer;
 }

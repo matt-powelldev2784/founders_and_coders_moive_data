@@ -21,6 +21,7 @@
   <body>
     <!--............................................-->
     <!--............................................-->
+
     <header class="header__container">
       <a href="/"
         ><img
@@ -29,32 +30,55 @@
           alt="Movie Database Logo"
         />
       </a>
+
       <!--............................................-->
+
       <nav class="nav__flexbox">
-        <div class="nav__buttton_container" id="add_moive">
+        <button class="nav__buttton_container" id="add_moive">
           <img
             class="nav__button_icon"
             src="./img/add.svg"
             alt="Add Movie To Database"
           />
           <p class="nav__button_text">Add Movie</p>
-        </div>
+        </button>
+
         <!--............................................-->
-        <div class="toggle_movie_browser" id="toggle_movie_browser">
+
+        <button class="nav__buttton_container" id="sort_moives_year">
+          <img
+            class="nav__button_icon"
+            src="./img/sort.svg"
+            alt="Toggle Movie Browser"
+          />
+          <p class="nav__button_text hide" id="nav__button_text__sort_moives">
+            Sort Movies
+          </p>
+        </button>
+
+        <!--............................................-->
+
+        <button class="toggle_movie_browser" id="toggle_movie_browser">
           <img
             class="nav__button_icon"
             id="nav__button_icon__hide"
             src="./img/hide.svg"
             alt="Toggle Movie Browser"
           />
-          <p class="nav__button_text hide" id="nav__button_text">
+          <p
+            class="nav__button_text hide"
+            id="nav__button_text__hide_movie_browser"
+          >
             Hide Movie Browser
           </p>
-        </div>
+        </button>
+
+        <!--............................................-->
       </nav>
     </header>
     <!--............................................-->
     <!--............................................-->
+
     <main class="main" id="main">
       <img
         class="home__bg_img"

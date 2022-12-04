@@ -12,6 +12,7 @@ import { onFormSubmit } from './helpers/onFormSubmit.js'
 import { renderMoiveInfo } from './helpers/renderMovieInfo.js'
 import { removeMovieInfoNode } from './helpers/renderMovieInfo.js'
 import { navigationLeft, navigationRight } from './helpers/navigation.js'
+import { sortMovies } from './helpers/sortMovies.js'
 
 export const addEventListeners = () => {
   const addMovie = document.getElementById('add_moive')
@@ -36,6 +37,9 @@ export const addEventListeners = () => {
 
   const movieNavRight = document.getElementById('moive_nav__right')
   movieNavRight.addEventListener('click', navigationRight)
+
+  const sortMovie = document.getElementById('sort_moives_year')
+  sortMovie.addEventListener('click', sortMovies)
 
   refreshMoviesNavEventListeners()
 }

@@ -7,7 +7,7 @@ import {
 } from '../toogleNodes/classProps.js'
 
 export const toggleMovieNav = () => {
-  const button = document.getElementById('nav__button_text')
+  const button = document.getElementById('nav__button_text__hide_movie_browser')
   const buttonClass = button.classList[1]
   const icon = document.getElementById('nav__button_icon__hide')
 
