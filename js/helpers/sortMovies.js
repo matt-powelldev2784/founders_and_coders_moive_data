@@ -13,6 +13,7 @@ const sortProps = {
 export const sortField = (event) => {
   const sortField = event.target.value
   sortBy = sortProps[sortField]
+  sortMovies()
 }
 
 export const sortMovies = (event) => {
