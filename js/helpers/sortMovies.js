@@ -17,7 +17,6 @@ export const sortField = (event) => {
 
 export const sortMovies = (event) => {
   const { field, sortType } = sortBy
-
   sortType === 'number' ? sortByNumber(field) : sortByText(field)
 
   sortLowToHigh = !sortLowToHigh
