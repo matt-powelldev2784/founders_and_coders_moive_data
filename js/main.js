@@ -6,3 +6,7 @@ import { getDataFromStorage } from './helpers/storage.js'
 getDataFromStorage()
 renderMovieNav(cleanMovieData)
 addEventListeners()
+
+setInterval(() => {
+  console.log('window.innerWidth', window.innerWidth)
+}, 1000)
