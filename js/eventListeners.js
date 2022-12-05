@@ -12,6 +12,7 @@ import { onFormSubmit } from './helpers/onFormSubmit.js'
 import { renderMoiveInfo } from './helpers/renderMovieInfo.js'
 import { removeMovieInfoNode } from './helpers/renderMovieInfo.js'
 import { navigationLeft, navigationRight } from './helpers/navigation.js'
+import { toggleSortMovieMenu } from './helpers/toogleSortMovieMenu.js'
 import { sortMovies, sortField } from './helpers/sortMovies.js'
 
 export const addEventListeners = () => {
@@ -38,12 +39,16 @@ export const addEventListeners = () => {
   const movieNavRight = document.getElementById('moive_nav__right')
   movieNavRight.addEventListener('click', navigationRight)
 
-  const sortMovie = document.getElementById('sort_moives_title')
-  const sortMovieArrow = document.getElementById('nav_sort_pulldown_arrow')
-  const sortByMenu = document.getElementById('nav__sort_pulldown_menu')
-  sortByMenu.addEventListener('change', sortField)
-  sortMovie.addEventListener('click', sortMovies)
-  sortMovieArrow.addEventListener('click', sortMovies)
+  const sortMovieDropdown = document.getElementById('sort_movies_dropdown')
+  sortMovieDropdown.addEventListener('click', toggleSortMovieMenu)
+
+  const findMovieSortMenuItems = document.getElementsByClassName(
+    'nav__button_text__dropdown'
+  )
+  const movieSortMenuItems = [...findMovieSortMenuItems]
+  movieSortMenuItems.forEach((element) => {
+    element.addEventListener('click', sortField)
+  })
 
   refreshMoviesNavEventListeners()
 }

@@ -73,22 +73,38 @@
 
           <!--............................................-->
 
-          <button class="nav__buttton_container" id="sort_moives_title">
+          <button class="nav__buttton_container" id="sort_movies_dropdown">
             <img
               class="nav__button_icon"
               src="./img/sort.svg"
               alt="Toggle Movie Browser"
             />
             <p class="nav__button_text hide" id="nav__button_text__sort_moives">
-              <select
-                class="nav__sort_pulldown_menu"
-                id="nav__sort_pulldown_menu"
-              >
-                <option value="year">Sort Movies By Year</option>
-                <option value="title">Sort Movies By Title</option>
-                <option value="rating">Sort Movies By Rating</option>
-              </select>
+              Sort Moives
             </p>
+            <div
+              class="nav__button_text__dropdown_container_HIDE"
+              id="nav__button_text__dropdown_container"
+            >
+              <p
+                class="nav__button_text__dropdown"
+                id="nav__button_text__dropdown_year"
+              >
+                By Year
+              </p>
+              <p
+                class="nav__button_text__dropdown"
+                id="nav__button_text__dropdown_title"
+              >
+                By Title
+              </p>
+              <p
+                class="nav__button_text__dropdown"
+                id="nav__button_text__dropdown_rating"
+              >
+                By Rating
+              </p>
+            </div>
             <img
               class="nav_sort_pulldown_arrow"
               id="nav_sort_pulldown_arrow"

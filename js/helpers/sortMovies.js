@@ -11,7 +11,7 @@ const sortProps = {
 }
 
 export const sortField = (event) => {
-  const sortField = event.target.value
+  const sortField = event.target.id.substring(27)
   sortBy = sortProps[sortField]
   sortMovies()
 }

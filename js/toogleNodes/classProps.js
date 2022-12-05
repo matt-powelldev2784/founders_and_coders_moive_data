@@ -19,6 +19,26 @@ const classProps = {
     display: true,
     append: '_HIDE',
   },
+  displaySortMoviesMenu: {
+    id: 'nav__button_text__dropdown_container',
+    display: true,
+    append: '_HIDE',
+  },
+  hideSortMoviesMenu: {
+    id: 'nav__button_text__dropdown_container',
+    display: false,
+    append: '_HIDE',
+  },
+  displaySortMoviesArrow: {
+    id: 'nav_sort_pulldown_arrow',
+    display: true,
+    append: '_HIDE',
+  },
+  hideSortMoviesArrow: {
+    id: 'nav_sort_pulldown_arrow',
+    display: false,
+    append: '_HIDE',
+  },
 }
 
 export const {
@@ -34,4 +54,8 @@ export const {
   displayHomeFlexbox,
   hideMoiveBrowserBtn,
   displayMoiveBrowserBtn,
+  displaySortMoviesMenu,
+  hideSortMoviesMenu,
+  displaySortMoviesArrow,
+  hideSortMoviesArrow,
 } = classProps

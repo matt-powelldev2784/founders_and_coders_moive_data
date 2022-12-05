@@ -23,6 +23,7 @@
   gap: 1.5rem;
   float: right;
   margin: 0 1rem;
+  overflow: visible;
 }
 @media only screen and (max-width: 992px) {
   .nav__flexbox {
@@ -39,6 +40,7 @@
   border: none;
   background: none;
   cursor: pointer;
+  overflow: visible;
 }
 
 .nav__button_menu_icon {
@@ -58,41 +60,46 @@
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 400;
   color: white;
-
-  top: 50%;
-  transform: translateY(-45%);
 }
 
-.nav__sort_pulldown_menu {
+.nav__button_text__dropdown_container {
   position: relative;
-  display: inline-block;
-  height: 1.5rem;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  font-weight: 400;
+  display: block;
+  background: #12192c;
+  z-index: 1;
+}
+
+.nav__button_text__dropdown_container_HIDE {
+  position: relative;
+  display: none;
+  background: #12192c;
+  z-index: 1;
+}
+
+.nav__button_text__dropdown {
+  position: relative;
+  display: block;
   color: white;
-
-  top: 50%;
-  transform: translateY(-55%);
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 0;
-  border-radius: 0;
-  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0.5rem;
+  z-index: 1;
 }
 
 .nav_sort_pulldown_arrow {
+  display: block;
   position: absolute;
-  top: calc(100% + 0.2rem);
+  top: 100%;
   left: 50%;
   right: 0.5rem;
   width: 0.7rem;
 }
 
-.toggle_movie_browser_HIDE {
+.nav_sort_pulldown_arrow_HIDE {
   display: none;
-  height: 1.5rem;
-  cursor: pointer;
-  border: 3px solid #7fff00;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  right: 0.5rem;
+  width: 0.7rem;
 }
