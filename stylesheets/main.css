@@ -7,7 +7,7 @@
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   overflow: hidden;
-  /* outline: solid 1px blue; */
+  outline: solid 1px blue;
 }
 
 /* ---------------------------- */
@@ -23,7 +23,9 @@ body {
 
 .header__container {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100vw;
   background: #12192c;
 }
@@ -33,6 +35,7 @@ body {
   background: #171e31;
   height: calc(100% - 19.5rem);
   width: 100vw;
+  border: 3px solid orange;
 }
 
 .main__fullscreen {
@@ -40,6 +43,7 @@ body {
   background: #171e31;
   height: calc(100% - 4rem);
   width: 100vw;
+  border: 3px solid yellow;
 }
 
 .main__container {
@@ -48,4 +52,5 @@ body {
   width: 100%;
   height: 100%;
   overflow: scroll;
+  border: 3px solid red;
 }
