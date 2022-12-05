@@ -22,14 +22,27 @@
   justify-content: flex-end;
   gap: 1.5rem;
   float: right;
-  margin: 0 1rem;
+  margin: 0rem 1rem;
+  padding: 0.5rem;
   overflow: visible;
 }
 @media only screen and (max-width: 992px) {
   .nav__flexbox {
-    width: 90%;
+    width: 95%;
     justify-content: center;
     margin: 0;
+    gap: calc(2vw + 0.2rem);
+  }
+}
+@media only screen and (max-width: 486px) {
+  .nav__flexbox {
+    height: 3.8rem;
+    align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 378px) {
+  .nav__flexbox {
+    height: 5rem;
   }
 }
 
@@ -56,7 +69,6 @@
 .nav__button_text {
   position: relative;
   display: inline-block;
-  height: 1.5rem;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 400;
   color: white;

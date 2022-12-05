@@ -26,10 +26,6 @@ body {
   flex-wrap: nowrap;
   height: calc(100vh - 15.5rem);
 }
-@media only screen and (max-width: 992px) {
-  .page_container_flexbox {
-  }
-}
 
 .header__container {
   position: relative;
@@ -38,13 +34,12 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100vw;
-  height: 4rem;
+  padding: 0.5rem 0rem;
   overflow: visible;
   background: #12192c;
 }
 @media only screen and (max-width: 992px) {
   .header__container {
-    height: 8rem;
     justify-content: center;
   }
 }
