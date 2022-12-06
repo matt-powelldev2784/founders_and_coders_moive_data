@@ -17,7 +17,8 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  overflow: scroll;
+  min-width: 250px;
+  overflow-y: scroll;
 }
 .home__flexbox_HIDE {
   display: none;
