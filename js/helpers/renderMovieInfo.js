@@ -3,7 +3,6 @@ import { toggleClass } from '../toogleNodes/toogleClass.js'
 import {
   hideHomeFlexbox,
   hidehomeImage,
-  hideMovieNav,
   mainStretch,
 } from '../toogleNodes/classProps.js'
 import { checkIsMobile } from './isMobile.js'
