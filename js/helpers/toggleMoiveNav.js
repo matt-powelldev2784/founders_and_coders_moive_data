@@ -2,8 +2,8 @@ import { toggleClass } from '../toogleNodes/toogleClass.js'
 import {
   hideMovieNav,
   displayMovieNav,
-  mainFullScreen,
-  mainHalfScreen,
+  mainStretch,
+  mainShrink,
 } from '../toogleNodes/classProps.js'
 
 export const toggleMovieNav = () => {
@@ -16,7 +16,7 @@ export const toggleMovieNav = () => {
     const text = document.createTextNode('Show Movie Browser')
     button.appendChild(text)
     toggleClass(hideMovieNav)
-    toggleClass(mainFullScreen)
+    toggleClass(mainStretch)
     button.classList.remove('hide')
     button.classList.add('show')
     icon.src = './img/show.svg'
@@ -27,7 +27,7 @@ export const toggleMovieNav = () => {
     const text = document.createTextNode('Hide Movie Browser')
     button.appendChild(text)
     toggleClass(displayMovieNav)
-    toggleClass(mainHalfScreen)
+    toggleClass(mainShrink)
     button.classList.remove('show')
     button.classList.add('hide')
     icon.src = './img/hide.svg'

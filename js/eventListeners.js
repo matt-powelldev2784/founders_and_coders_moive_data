@@ -1,11 +1,11 @@
 import { toggleClass } from './toogleNodes/toogleClass.js'
 import {
   displayForm,
-  mainFullScreen,
   hideMovieNav,
   hidehomeImage,
   displayHomeFlexbox,
   hideMoiveBrowserBtn,
+  mainStretch,
 } from './toogleNodes/classProps.js'
 import { toggleMovieNav } from './helpers/toggleMoiveNav.js'
 import { onFormSubmit } from './helpers/onFormSubmit.js'
@@ -21,7 +21,7 @@ export const addEventListeners = () => {
     removeMovieInfoNode()
     toggleClass(displayHomeFlexbox)
     toggleClass(hideMovieNav)
-    toggleClass(mainFullScreen)
+    toggleClass(mainStretch)
     toggleClass(displayForm)
     toggleClass(hidehomeImage)
     toggleClass(hideMoiveBrowserBtn)

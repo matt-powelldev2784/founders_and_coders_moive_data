@@ -7,7 +7,6 @@
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   overflow: hidden;
-  /* outline: solid 1px blue; */
 }
 
 /* ---------------------------- */
@@ -25,6 +24,13 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   height: calc(100vh - 15.5rem);
+}
+.page_container_flexbox__STRETCH {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: calc(100vh);
 }
 
 .header__container {
@@ -51,11 +57,10 @@ body {
   height: 100%;
   width: 100vw;
 }
-
 .main__fullscreen {
   position: relative;
   background: #171e31;
-  height: calc(100% - 4rem);
+  height: calc(100% - 3.5rem);
   width: 100vw;
 }
 

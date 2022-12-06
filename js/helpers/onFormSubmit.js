@@ -3,9 +3,9 @@ import { toggleClass } from '../toogleNodes/toogleClass.js'
 import {
   displayMovieNav,
   hideForm,
-  mainHalfScreen,
   displayhomeImage,
   displayMoiveBrowserBtn,
+  mainShrink,
 } from '../toogleNodes/classProps.js'
 import { injectUploadedImage } from './injectUploadedImage.js'
 
@@ -35,7 +35,7 @@ export const onFormSubmit = (event) => {
   formContainer.reset()
   toggleClass(hideForm)
   toggleClass(displayMovieNav)
-  toggleClass(mainHalfScreen)
+  toggleClass(mainShrink)
   toggleClass(displayhomeImage)
   toggleClass(displayMoiveBrowserBtn)
 }
