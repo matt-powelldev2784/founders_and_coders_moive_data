@@ -1,6 +1,13 @@
 import { cleanMovieData } from '../movieData.js'
 import { toggleClass } from '../toogleNodes/toogleClass.js'
-import { hideHomeFlexbox, hidehomeImage } from '../toogleNodes/classProps.js'
+import {
+  hideHomeFlexbox,
+  hidehomeImage,
+  hideMovieNav,
+  mainStretch,
+} from '../toogleNodes/classProps.js'
+import { checkIsMobile } from './isMobile.js'
+import { toggleMovieNav } from './toggleMoiveNav.js'
 
 export const removeMovieInfoNode = () => {
   const movieNode = document.getElementsByClassName('large_card')[0]
@@ -13,6 +20,11 @@ export const renderMoiveInfo = (event) => {
   removeMovieInfoNode()
   toggleClass(hideHomeFlexbox)
   toggleClass(hidehomeImage)
+  const isMobile = checkIsMobile()
+  if (isMobile) {
+    toggleMovieNav()
+    toggleClass(mainStretch)
+  }
 
   const targetId = event.currentTarget.id
   const regEx = /\d+/
