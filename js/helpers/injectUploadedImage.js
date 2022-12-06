@@ -1,7 +1,7 @@
 import { cleanMovieData } from '../movieData.js'
 import { renderMovieNav } from './renderMovieNav.js'
 import { refreshMoviesNavEventListeners } from '../eventListeners.js'
-import { addDatatoStorage } from './storage.js'
+import { addDatatoStorage } from './localStorage.js'
 
 export const injectUploadedImage = () => {
   const file = document.getElementById('form__image_upload').files[0]
