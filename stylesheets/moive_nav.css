@@ -3,7 +3,7 @@
   position: fixed;
   bottom: 0;
   width: 100vw;
-  height: 15.5rem;
+  height: 15rem;
   background: #171e31;
 }
 .moive_nav_HIDE {
@@ -41,7 +41,7 @@
 .movie_nav__card {
   position: relative;
   display: block;
-  height: 13.5rem;
+  height: 15rem;
   width: 20rem;
   margin: 1rem 2rem;
 }
