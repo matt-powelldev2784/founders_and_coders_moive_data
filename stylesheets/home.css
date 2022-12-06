@@ -1,7 +1,7 @@
 .home__bg_img {
   position: absolute;
   width: auto;
-  height: 80%;
+  max-height: 50vw;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
@@ -25,26 +25,40 @@
 
 .home__header_div {
   display: block;
+  width: 20rem;
   margin: 8vw;
-  max-width: 26rem;
-}
-
-.home__h2 {
-  color: #4eb858;
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
 }
 
 .home__h1 {
   display: block;
   margin: 0 auto;
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: 4rem;
   font-weight: 700;
-
   color: white;
+}
+@media only screen and (max-width: 451px) {
+  .home__h1 {
+    font-size: clamp(2.5rem, 16vw, 3.5rem);
+  }
 }
 
 .home__h1_span {
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: 4rem;
   font-weight: 700;
   color: #4eb858;
+}
+@media only screen and (max-width: 451px) {
+  .home__h1_span {
+    font-size: clamp(2.5rem, 16vw, 3.5rem);
+  }
+}
+
+.home__h2 {
+  color: #4eb858;
+  font-size: 1.4rem;
+}
+@media only screen and (max-width: 451px) {
+  .home__h2 {
+    font-size: clamp(1.15rem, 2vw, 3.5rem);
+  }
 }

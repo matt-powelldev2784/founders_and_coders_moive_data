@@ -9,4 +9,5 @@ addEventListeners()
 
 setInterval(() => {
   console.log('window.innerWidth', window.innerWidth)
-}, 1000)
+  console.log('window.innerHeight', window.innerHeight)
+}, 3000)
