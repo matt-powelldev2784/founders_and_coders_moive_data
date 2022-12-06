@@ -11,9 +11,9 @@ import { toggleMovieNav } from './helpers/toggleMoiveNav.js'
 import { onFormSubmit } from './helpers/onFormSubmit.js'
 import { renderMoiveInfo } from './helpers/renderMovieInfo.js'
 import { removeMovieInfoNode } from './helpers/renderMovieInfo.js'
-import { navigationLeft, navigationRight } from './helpers/navigation.js'
+import { navigationLeft, navigationRight } from './helpers/moiveNavButtons.js'
 import { toggleSortMovieMenu } from './helpers/toogleSortMovieMenu.js'
-import { sortMovies, sortField } from './helpers/sortMovies.js'
+import { sortField } from './helpers/sortMovies.js'
 
 export const addEventListeners = () => {
   const addMovie = document.getElementById('add_moive')
@@ -25,6 +25,7 @@ export const addEventListeners = () => {
     toggleClass(displayForm)
     toggleClass(hidehomeImage)
     toggleClass(hideMoiveBrowserBtn)
+    toggleMovieNav()
   })
 
   const toggleMoiveBrowser = document.getElementById('toggle_movie_browser')
