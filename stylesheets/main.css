@@ -58,6 +58,7 @@ body {
   background: #171e31;
   height: 100%;
   width: 100vw;
+  overflow-y: scroll;
 }
 .main__fullscreen {
   position: relative;
@@ -66,7 +67,7 @@ body {
   width: 100vw;
 }
 
-.main__container {
+.homepage_text {
   position: relative;
   display: block;
   width: 100%;

@@ -1,4 +1,4 @@
-import { toggleClass } from '../toogleNodes/toogleClass.js'
+import { toggleClass } from '../toogleClass/toogleClass.js'
 import {
   hideMovieNav,
   displayMovieNav,
@@ -7,9 +7,9 @@ import {
   hideHomeFlexbox,
   displayhomeImage,
   hidehomeImage,
-} from '../toogleNodes/classProps.js'
+} from '../toogleClass/classProps.js'
 import { removeMovieInfoNode } from './renderMovieInfo.js'
-import { checkIsMobile } from './isMobile.js'
+import { checkIsMobile } from '../helpers/isMobile.js'
 
 export const toggleMovieNav = () => {
   const button = document.getElementById('nav__button_text__hide_movie_browser')

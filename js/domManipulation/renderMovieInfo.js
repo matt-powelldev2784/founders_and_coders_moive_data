@@ -1,12 +1,9 @@
 import { cleanMovieData } from '../movieData.js'
-import { toggleClass } from '../toogleNodes/toogleClass.js'
-import {
-  hideHomeFlexbox,
-  hidehomeImage,
-  mainStretch,
-} from '../toogleNodes/classProps.js'
-import { checkIsMobile } from './isMobile.js'
+import { toggleClass } from '../toogleClass/toogleClass.js'
+import { mainStretch } from '../toogleClass/classProps.js'
+import { checkIsMobile } from '../helpers/isMobile.js'
 import { toggleMovieNav } from './toggleMoiveNav.js'
+import { removeAllChildNodes } from './removeAllChildNodes.js'
 
 export const removeMovieInfoNode = () => {
   const movieNode = document.getElementsByClassName('large_card')[0]
@@ -17,8 +14,7 @@ export const removeMovieInfoNode = () => {
 
 export const renderMoiveInfo = (event) => {
   removeMovieInfoNode()
-  toggleClass(hideHomeFlexbox)
-  toggleClass(hidehomeImage)
+  removeAllChildNodes('main')
   const isMobile = checkIsMobile()
   if (isMobile) {
     toggleMovieNav()
@@ -120,7 +116,7 @@ export const renderMoiveInfo = (event) => {
   textBox.appendChild(castNode)
 
   //add nodes to card
-  const mainContainer = document.getElementById('main__container')
+  const mainContainer = document.getElementById('main')
   mainContainer.appendChild(articleNode)
   articleNode.appendChild(imageNode)
   articleNode.appendChild(textContainer)

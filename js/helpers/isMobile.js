@@ -1,10 +1,9 @@
-import { toggleClass } from '../toogleNodes/toogleClass.js'
-import { hideMovieNav, mainStretch } from '../toogleNodes/classProps.js'
-import { toggleMovieNav } from './toggleMoiveNav.js'
+import { toggleClass } from '../toogleClass/toogleClass.js'
+import { hideMovieNav, mainStretch } from '../toogleClass/classProps.js'
+import { toggleMovieNav } from '../domManipulation/toggleMoiveNav.js'
 
 export const checkIsMobileOnStart = () => {
   const isMobile = window.innerWidth < 451 ? true : false
-  console.log('isMobile', isMobile)
 
   if (isMobile) {
     toggleClass(hideMovieNav)

@@ -1,10 +1,10 @@
-import { toggleClass } from '../toogleNodes/toogleClass.js'
+import { toggleClass } from '../toogleClass/toogleClass.js'
 import {
   displaySortMoviesMenu,
   hideSortMoviesMenu,
   displaySortMoviesArrow,
   hideSortMoviesArrow,
-} from '../toogleNodes/classProps.js'
+} from '../toogleClass/classProps.js'
 
 let menuOpen = false
 

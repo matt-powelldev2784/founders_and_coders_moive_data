@@ -1,8 +1,11 @@
 .form__container {
+  position: relative;
   display: block;
-  width: 35vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90%;
   background: #12192c;
-  margin: 8vw;
+  margin: 0 auto;
   border-radius: 1rem;
   color: white;
 }
