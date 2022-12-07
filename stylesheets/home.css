@@ -10,7 +10,15 @@
   display: none;
 }
 
-.home__flexbox {
+.homepage_text {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.homepage_text__flexbox {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -20,17 +28,17 @@
   min-width: 250px;
   overflow-y: scroll;
 }
-.home__flexbox_HIDE {
+.homepage_text__flexbox_HIDE {
   display: none;
 }
 
-.home__header_div {
+.homepage_text__header_div {
   display: block;
   width: 20rem;
   margin: 8vw;
 }
 
-.home__h1 {
+.homepage_text__h1 {
   display: block;
   margin: 0 auto;
   font-size: 4rem;
@@ -38,28 +46,28 @@
   color: white;
 }
 @media only screen and (max-width: 451px) {
-  .home__h1 {
+  .homepage_text__h1 {
     font-size: clamp(2.5rem, 16vw, 3.5rem);
   }
 }
 
-.home__h1_span {
+.homepage_text__h1_span {
   font-size: 4rem;
   font-weight: 700;
   color: #4eb858;
 }
 @media only screen and (max-width: 451px) {
-  .home__h1_span {
+  .homepage_text__h1_span {
     font-size: clamp(2.5rem, 16vw, 3.5rem);
   }
 }
 
-.home__h2 {
+.homepage_text__h2 {
   color: #4eb858;
   font-size: 1.4rem;
 }
 @media only screen and (max-width: 451px) {
-  .home__h2 {
+  .homepage_text__h2 {
     font-size: clamp(1.15rem, 2vw, 3.5rem);
   }
 }
