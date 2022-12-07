@@ -4,12 +4,12 @@ import {
   displayMovieNav,
   mainStretch,
   mainShrink,
-  hideHomeFlexbox,
-  displayhomeImage,
-  hidehomeImage,
 } from '../toogleClass/classProps.js'
 import { removeMovieInfoNode } from './renderMovieInfo.js'
 import { checkIsMobile } from '../helpers/isMobile.js'
+import { removeAllChildNodes } from './removeAllChildNodes.js'
+import { insertHtmlFile } from './insertHtmlFile/insertHtmlFile.js'
+import { homePageBgImage } from './insertHtmlFile/htmlFileProps.js'
 
 export const toggleMovieNav = () => {
   const button = document.getElementById('nav__button_text__hide_movie_browser')
@@ -41,17 +41,14 @@ export const toggleMovieNav = () => {
   const isMobile = checkIsMobile()
 
   if (buttonClass === 'hide') {
-    if (isMobile) {
-      toggleClass(hidehomeImage)
-    }
     hideMoiveNav()
   }
 
   if (buttonClass === 'show') {
     if (isMobile) {
-      toggleClass(hideHomeFlexbox)
-      toggleClass(displayhomeImage)
+      removeAllChildNodes('main')
       removeMovieInfoNode()
+      insertHtmlFile(homePageBgImage)
     }
     showMoiveNav()
   }
