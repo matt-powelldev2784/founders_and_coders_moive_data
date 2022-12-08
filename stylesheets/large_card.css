@@ -1,38 +1,100 @@
 .large_card {
+  display: flex;
+  flex-direction: row-reverse;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
+}
+@media only screen and (max-width: 992px) {
+  .large_card {
+    position: relative;
+    display: block;
+  }
 }
 
-.large_card__img_container {
+.large_card__img_gradient {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  float: right;
+  background-image: linear-gradient(to left, transparent, #171e31);
+  z-index: 1;
+}
+@media only screen and (max-width: 992px) {
+  .large_card__img_gradient {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent, #171e31);
+  }
+}
+@media only screen and (max-width: 451px) {
+  .large_card__img_gradient {
+    width: 100%;
+    height: 100%;
+    background-image: unset;
+  }
+}
+
+.large_card__img {
   position: relative;
   width: 50%;
   height: 100%;
   float: right;
-  background-image: linear-gradient(to left, transparent, #171e31),
-    url(../img/04_budapest_hotel.jpg);
   background-size: cover;
   background-position: top;
 }
+@media only screen and (max-width: 992px) {
+  .large_card__img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: top;
+  }
+}
 
 .large_card__text_container {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   height: 100%;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+@media only screen and (max-width: 992px) {
+  .large_card__text_container {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
 }
 
 .large_card__text_flex_container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  height: auto;
   width: 92%;
-  transform: translate(-50%, -50%);
+  min-width: 280px;
+  margin: auto;
+}
+@media only screen and (max-width: 992px) {
+  .large_card__text_flex_container {
+    background: #171e31;
+    width: 92%;
+  }
 }
 
 .large_card__text_flexbox {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media only screen and (max-width: 992px) {
+  .large_card__text_flexbox {
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .large_card__text_flexbox {
+    padding: 0.5rem;
+  }
 }
 
 .large_card__h1 {
@@ -43,6 +105,12 @@
   text-justify: inter-character;
   text-align-last: justify;
   color: white;
+}
+@media only screen and (max-width: 451px) {
+  .large_card__h1 {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
 }
 
 .large_card__star_container {
@@ -70,6 +138,13 @@
   height: 2rem;
   margin: 1rem;
 }
+@media only screen and (max-width: 451px) {
+  .large_card__star {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.5rem;
+  }
+}
 
 .large_card__details_flexbox {
   display: flex;
@@ -77,37 +152,46 @@
   align-items: stretch;
 }
 
-.large_card__year {
+.large_card__year,
+.large_card__rating,
+.large_card__runtime {
   display: inline-block;
   font-size: 1.3rem;
   padding: 1rem;
   color: white;
 }
-
-.large_card__rating {
-  display: inline-block;
-  font-size: 1.4rem;
-  padding: 1rem;
-  color: white;
-}
-
-.large_card__runtime {
-  display: inline-block;
-  font-size: 1.4rem;
-  padding: 1rem;
-  color: white;
+@media only screen and (max-width: 451px) {
+  .large_card__year,
+  .large_card__rating,
+  .large_card__runtime {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
 }
 
 .large_card__plot {
   font-size: 1.4rem;
   text-align: center;
-  padding: 1rem 1rem;
+  padding: 1rem;
   color: #565b6f;
+}
+@media only screen and (max-width: 451px) {
+  .large_card__plot {
+    font-size: 1.1rem;
+    padding: 0.5em;
+  }
 }
 
 .large_card__cast {
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align: center;
   padding: 1rem;
   color: white;
+}
+
+@media only screen and (max-width: 451px) {
+  .large_card__cast {
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
 }

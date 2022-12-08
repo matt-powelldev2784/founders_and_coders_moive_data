@@ -96,14 +96,14 @@
   position: relative;
   display: block;
   background: #12192c;
-  z-index: 1;
+  z-index: 999;
 }
 
 .nav__button_text__dropdown_container_HIDE {
   position: relative;
   display: none;
   background: #12192c;
-  z-index: 1;
+  z-index: 999;
 }
 
 .nav__button_text__dropdown {
@@ -113,7 +113,7 @@
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 400;
   margin: 0.5rem;
-  z-index: 1;
+  z-index: 999;
 }
 
 .nav_sort_pulldown_arrow {

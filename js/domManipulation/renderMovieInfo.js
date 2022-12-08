@@ -42,10 +42,11 @@ export const renderMoiveInfo = (event) => {
   articleNode.setAttribute('id', `movie_nav__card__${key}`)
 
   //create image node
+  const imageGradient = document.createElement('div')
+  imageGradient.classList.add('large_card__img_gradient')
   const imageNode = document.createElement('div')
-  imageNode.classList.add('large_card__img_container')
-  imageNode.style.backgroundImage = `linear-gradient(to left, transparent, #171e31),
-    url(${image})`
+  imageNode.classList.add('large_card__img')
+  imageNode.style.backgroundImage = `    url(${image})`
 
   //create container nodes
   const textContainer = document.createElement('div')
@@ -118,6 +119,7 @@ export const renderMoiveInfo = (event) => {
   //add nodes to card
   const mainContainer = document.getElementById('main')
   mainContainer.appendChild(articleNode)
+  articleNode.appendChild(imageGradient)
   articleNode.appendChild(imageNode)
   articleNode.appendChild(textContainer)
 }
