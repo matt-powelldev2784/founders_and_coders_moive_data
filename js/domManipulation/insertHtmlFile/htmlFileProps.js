@@ -1,21 +1,28 @@
+import {
+  movieNavHtml,
+  homePageHtml,
+  homeBgImageHtml,
+  headerHtml,
+} from './htmlFiles.js'
+
 const htmlFileProps = {
   header: {
-    htmlFile: '../../../html/header.html',
+    htmlFile: headerHtml,
     containerElementId: 'header__container',
     htmlInsertPosition: 'afterbegin',
   },
   homePage: {
-    htmlFile: '../../../html/home_page.html',
+    htmlFile: homePageHtml,
     containerElementId: 'main',
     htmlInsertPosition: 'beforeend',
   },
   homePageBgImage: {
-    htmlFile: '../../../html/home_background_img.html',
+    htmlFile: homeBgImageHtml,
     containerElementId: 'main',
     htmlInsertPosition: 'afterbegin',
   },
   moiveNav: {
-    htmlFile: '../../../html/movie_nav.html',
+    htmlFile: movieNavHtml,
     containerElementId: 'moive_nav',
     htmlInsertPosition: 'afterbegin',
   },
