@@ -66,3 +66,15 @@ body {
   width: 100vw;
   overflow-y: scroll;
 }
+
+.moive_nav {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 15rem;
+  min-width: 320px;
+  background: #171e31;
+}
+.moive_nav_HIDE {
+  display: none;
+}
