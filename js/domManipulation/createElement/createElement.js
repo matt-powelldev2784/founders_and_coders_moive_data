@@ -1,4 +1,4 @@
-const createRichElement = (tagName, attributes, ...content) => {
+export const createElement = (tagName, attributes, ...content) => {
   let element = document.createElement(tagName)
   if (attributes) {
     for (const [attr, value] of Object.entries(attributes)) {
