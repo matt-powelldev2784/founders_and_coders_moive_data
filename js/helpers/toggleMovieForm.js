@@ -3,6 +3,7 @@ import { renderMovieForm } from '../domManipulation/createElement/createMovieFor
 import { removeAllChildNodes } from '../domManipulation/removeAllChildNodes.js'
 import { toggleClass } from '../toogleClass/toogleClass.js'
 import { mainStretch } from '../toogleClass/classProps.js'
+import { onFormSubmit } from './onFormSubmit.js'
 
 export const toggleMovieForm = () => {
   toggleMovieNav()

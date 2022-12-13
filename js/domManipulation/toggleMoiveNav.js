@@ -8,8 +8,6 @@ import {
 import { removeMovieInfoNode } from './renderMovieInfo.js'
 import { checkIsMobile } from '../helpers/isMobile.js'
 import { removeAllChildNodes } from './removeAllChildNodes.js'
-import { insertHtmlFile } from './insertHtmlFile/insertHtmlFile.js'
-import { homePageBgImage } from './insertHtmlFile/htmlFileProps.js'
 import appState from '../state/appState.js'
 
 export const toggleMovieNav = () => {
@@ -51,7 +49,6 @@ export const toggleMovieNav = () => {
   if (isMobile) {
     removeAllChildNodes('main')
     removeMovieInfoNode()
-    insertHtmlFile(homePageBgImage)
   }
 
   displayMovieBrowser ? hideMovieNavigation() : showMovieNavigation()

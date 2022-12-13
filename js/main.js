@@ -5,14 +5,6 @@ import { getDataFromStorage } from './helpers/localStorage.js'
 import { checkIsMobileOnStart } from './helpers/isMobile.js'
 import { createMainNav } from './domManipulation/createElement/createMainNav/createMainNav.js'
 
-import { insertInitialHtmlFiles } from './domManipulation/insertHtmlFile/insertInitialHtmlFiles.js'
-
-const startSeq = async () => {
-  await insertInitialHtmlFiles()
-  loadPage()
-}
-startSeq()
-
 const loadPage = () => {
   createMainNav()
   checkIsMobileOnStart()
@@ -20,6 +12,8 @@ const loadPage = () => {
   renderMovieNav(cleanMovieData)
   addEventListeners()
 }
+
+loadPage()
 
 // setInterval(() => {
 //   console.log('window.innerWidth', window.innerWidth)

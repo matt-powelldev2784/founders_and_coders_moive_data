@@ -3,14 +3,14 @@ import { toggleClass } from '../toogleClass/toogleClass.js'
 import { mainShrink } from '../toogleClass/classProps.js'
 import { injectUploadedImage } from './injectUploadedImage.js'
 import { removeAllChildNodes } from '../domManipulation/removeAllChildNodes.js'
-import { insertHtmlFile } from '../domManipulation/insertHtmlFile/insertHtmlFile.js'
-import { homePageBgImage } from '../domManipulation/insertHtmlFile/htmlFileProps.js'
 import { toggleMovieNav } from '../domManipulation/toggleMoiveNav.js'
 
 export const onFormSubmit = (event) => {
   event.preventDefault()
   const formContainer = document.getElementById('form__container')
   const formElements = [...formContainer.elements]
+
+  console.log('formElements', formElements)
 
   const newMovieData = formElements.map((element) => {
     const key = element.name
@@ -28,11 +28,12 @@ export const onFormSubmit = (event) => {
   const key = cleanMovieData.length
   newMovie.key = key
 
+  console.log('newMovie', newMovie)
+
   cleanMovieData.unshift(newMovie)
   injectUploadedImage()
   formContainer.reset()
   removeAllChildNodes('main')
   toggleClass(mainShrink)
   toggleMovieNav()
-  insertHtmlFile(homePageBgImage)
 }
