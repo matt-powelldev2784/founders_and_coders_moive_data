@@ -5,12 +5,22 @@ import { getDataFromStorage } from './helpers/localStorage.js';
 import { renderMainNav } from './createElement/createMainNav/renderMainNav.js';
 import { renderHomePage } from './createElement/createHomePage/renderHomePage.js';
 import { checkIsMobile } from './helpers/isMobile.js';
+import { toggleMovieNav } from './helpers/toggleMovieNav.js';
 
 const loadDesktopPage = () => {
   renderMainNav();
   renderHomePage();
   getDataFromStorage();
   renderMovieNav(cleanMovieData);
+  addEventListeners();
+};
+
+const loadMobilePage = () => {
+  renderMainNav();
+  getDataFromStorage();
+  renderMovieNav(cleanMovieData);
+  toggleMovieNav();
+  renderHomePage();
   addEventListeners();
 };
 
