@@ -1,117 +1,86 @@
-import { cleanMovieData } from '../../../movieData.js'
-import { toggleClass } from '../../../toogleClass/toogleClass.js'
-import { mainStretch } from '../../../toogleClass/classProps.js'
-import { checkIsMobile } from '../../../helpers/isMobile.js'
-import { toggleMovieNav } from '../../toggleMoiveNav.js'
-import { removeAllChildNodes } from '../../removeAllChildNodes.js'
+import { cleanMovieData } from "../../../movieData.js";
+import { toggleClass } from "../../../toogleClass/toogleClass.js";
+import { mainStretch } from "../../../toogleClass/classProps.js";
+import { checkIsMobile } from "../../../helpers/isMobile.js";
+import { toggleMovieNav } from "../../toggleMoiveNav.js";
+import { removeAllChildNodes } from "../../removeAllChildNodes.js";
+import { createElement } from "../createElement.js";
 
 export const renderMoiveInfo = (event) => {
-  removeAllChildNodes('main')
-  const isMobile = checkIsMobile()
+  removeAllChildNodes("main");
+  const isMobile = checkIsMobile();
   if (isMobile) {
-    toggleMovieNav()
-    toggleClass(mainStretch)
+    toggleMovieNav();
+    toggleClass(mainStretch);
   }
 
-  const targetId = event.currentTarget.id
-  const regEx = /\d+/
-  const movieKey = parseInt(targetId.match(regEx)[0])
+  const targetId = event.currentTarget.id;
+  const regEx = /\d+/;
+  const movieKey = parseInt(targetId.match(regEx)[0]);
 
   const findMoive = cleanMovieData.filter((movie) => {
     if (movie.key === movieKey) {
-      return movie
+      return movie;
     }
-  })
-  const movie = findMoive[0]
-  const { key, plot, runtime, year, image } = movie
-  const title = movie.title.toUpperCase()
-  const rating = parseInt(Math.round(movie.rating / 2))
-  const cast = movie.cast.join(', ')
+  });
+  const movie = findMoive[0];
+  const { key, plot, runtime, year, image } = movie;
+  const title = movie.title.toUpperCase();
+  const rating = parseInt(Math.round(movie.rating / 2));
+  const cast = movie.cast.join(", ");
 
-  //create article node
-  const articleNode = document.createElement('article')
-  articleNode.classList.add('large_card')
-  articleNode.setAttribute('id', `movie_nav__card__${key}`)
+  //create image elementes
+  const imageGradient = createElement("div", {
+    class: "large_card__img_gradient",
+  });
+  const imageNode = createElement("div", {
+    class: "large_card__img",
+    style: `background-image: url(${image})`,
+  });
 
-  //create image node
-  const imageGradient = document.createElement('div')
-  imageGradient.classList.add('large_card__img_gradient')
-  const imageNode = document.createElement('div')
-  imageNode.classList.add('large_card__img')
-  imageNode.style.backgroundImage = `    url(${image})`
+  //create text elements
+  const h1 = createElement("h1", { class: "large_card__h1" }, title);
 
-  //create container nodes
-  const textContainer = document.createElement('div')
-  textContainer.classList.add('large_card__text_container')
-  const flexConatiner = document.createElement('div')
-  flexConatiner.classList.add('large_card__text_flex_container')
-  const textBox = document.createElement('div')
-  textBox.classList.add('large_card__text_flexbox')
-
-  //create h1 node
-  const h1 = document.createElement('h1')
-  h1.classList.add('large_card__h1')
-  const h1text = document.createTextNode(title)
-  h1.appendChild(h1text)
-
-  //create stars node
-  const starContainer = document.createElement('div')
-  starContainer.classList.add('large_card__star_container')
-  const numberOfStars = Array(rating).fill('star')
+  const starContainer = createElement("div", { class: "large_card__star_container" });
+  const numberOfStars = Array(rating).fill("star");
   numberOfStars.forEach(() => {
-    const star = document.createElement('div')
-    star.classList.add('large_card__star')
-    starContainer.appendChild(star)
-  })
+    const star = document.createElement("div");
+    star.classList.add("large_card__star");
+    starContainer.appendChild(star);
+  });
 
-  //create details flexbox
-  const detailsFlexbox = document.createElement('div')
-  detailsFlexbox.classList.add('large_card__details_flexbox')
+  const yearNode = createElement("p", { class: "large_card__year" }, `YEAR : ${year}`);
+  const runtimeNode = createElement("p", { class: "large_card__year" }, `RUNTIME : ${runtime} MINS`);
+  const detailsFlexbox = createElement("div", { class: "large_card__details_flexbox" }, yearNode, runtimeNode);
 
-  const yearNode = document.createElement('p')
-  yearNode.classList.add('large_card__year')
-  const yearText = document.createTextNode(`YEAR : ${year}`)
-  yearNode.appendChild(yearText)
+  const plotNode = createElement("p", { class: "large_card__plot" }, plot);
+  const castNode = createElement("p", { class: "large_card__cast" }, cast);
 
-  const ratingNode = document.createElement('p')
-  ratingNode.classList.add('large_card__year')
-  const ratingText = document.createTextNode(`RATING : ${rating} / 5`)
-  ratingNode.appendChild(ratingText)
+  //append elements to containers
+  const textBox = createElement(
+    "div",
+    { class: "large_card__text_flexbox" },
+    h1,
+    starContainer,
+    detailsFlexbox,
+    plotNode,
+    castNode
+  );
+  const flexConatiner = createElement("div", { class: "large_card__text_flex_container" }, textBox);
+  const textContainer = createElement("div", { class: "large_card__text_container" }, flexConatiner);
 
-  const runtimeNode = document.createElement('p')
-  runtimeNode.classList.add('large_card__year')
-  const runtimeText = document.createTextNode(`RUNTIME : ${runtime} MINS`)
-  runtimeNode.appendChild(runtimeText)
+  const articleNode = createElement(
+    "article",
+    {
+      class: "  large_card",
+      id: `movie_nav__card__${key}`,
+    },
+    imageGradient,
+    imageNode,
+    textContainer
+  );
 
-  detailsFlexbox.appendChild(yearNode)
-  detailsFlexbox.appendChild(ratingNode)
-  detailsFlexbox.appendChild(runtimeNode)
-
-  //create plot node
-  const plotNode = document.createElement('p')
-  plotNode.classList.add('large_card__plot')
-  const plotText = document.createTextNode(plot)
-  plotNode.appendChild(plotText)
-
-  //create cast node
-  const castNode = document.createElement('p')
-  castNode.classList.add('large_card__cast')
-  const castText = document.createTextNode(cast)
-  castNode.appendChild(castText)
-
-  //add nodes to text container
-  textContainer.appendChild(flexConatiner)
-  flexConatiner.appendChild(textBox)
-  textBox.appendChild(h1)
-  textBox.appendChild(starContainer)
-  textBox.appendChild(detailsFlexbox)
-  textBox.appendChild(plotNode)
-  textBox.appendChild(castNode)
-
-  //add nodes to card
-  const mainContainer = document.getElementById('main')
-  mainContainer.appendChild(articleNode)
-  articleNode.appendChild(imageGradient)
-  articleNode.appendChild(imageNode)
-  articleNode.appendChild(textContainer)
-}
+  //render card
+  const mainContainer = document.getElementById("main");
+  mainContainer.appendChild(articleNode);
+};
