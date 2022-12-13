@@ -5,7 +5,7 @@ import { removeAllChildNodes } from './removeAllChildNodes.js';
 import appState from '../state/appState.js';
 
 export const toggleMovieNav = () => {
-  const displayMovieBrowser = appState.displayMovieBrowser;
+  const { displayMovieBrowser } = appState;
   const button = document.getElementById('nav__buttton_container__toggle_movie_browser');
   const icon = document.getElementById('nav__button_icon__movie_browser');
   const navButtonText = document.getElementById('nav__button_text__hide_movie_browser');

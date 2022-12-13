@@ -10,7 +10,6 @@ export const toggleMovieForm = () => {
   removeAllChildNodes('main');
   toggleClass(mainStretch);
   renderMovieForm();
-  removeAllChildNodes('nav__buttton_container__add_moive');
 
   const form = document.getElementById('form__container');
   form.addEventListener('submit', onFormSubmit);
