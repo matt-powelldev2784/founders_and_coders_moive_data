@@ -2,44 +2,43 @@ import { toggleClass } from '../toogleClass/toogleClass.js';
 import { hideMovieNav, displayMovieNav, mainStretch, mainShrink } from '../toogleClass/classProps.js';
 import { checkIsMobile } from './isMobile.js';
 import { removeAllChildNodes } from './removeAllChildNodes.js';
-import appState from '../state/appState.js';
+import {
+  addHideMovieBrowserButton,
+  addShowMovieBrowserButton,
+} from '../createElement/createMainNav/buttons/addMovieBrowserButton.js';
+import { addEventListeners } from '../eventListeners.js';
+
+export let movieBrowserIsDisplayed = true;
 
 export const toggleMovieNav = () => {
-  const { displayMovieBrowser } = appState;
-  const button = document.getElementById('nav__buttton_container__toggle_movie_browser');
   const icon = document.getElementById('nav__button_icon__movie_browser');
-  const navButtonText = document.getElementById('nav__button_text__hide_movie_browser');
+  const navButton = document.getElementById('nav__buttton_container__toggle_movie_browser');
+  const addMovieButton = document.getElementById('nav__buttton_container__add_moive');
 
   const hideMovieNavigation = () => {
-    navButtonText.firstChild.remove();
-    const text = document.createTextNode('Show Movie Browser');
-    navButtonText.appendChild(text);
+    navButton.remove();
+    addMovieButton.after(addShowMovieBrowserButton);
     toggleClass(hideMovieNav);
     toggleClass(mainStretch);
-    button.classList.remove('movie_browser_hide');
-    button.classList.add('movie_browser_show');
     icon.src = './img/show.svg';
-    appState.displayMovieBrowser = false;
+    movieBrowserIsDisplayed = false;
+    addEventListeners();
   };
 
   const showMovieNavigation = () => {
-    console.log('bbbb');
-    navButtonText.firstChild.remove();
-    const text = document.createTextNode('Hide Movie Browser');
-    navButtonText.appendChild(text);
+    navButton.remove();
+    addMovieButton.after(addHideMovieBrowserButton);
     toggleClass(displayMovieNav);
     toggleClass(mainShrink);
-    button.classList.remove('movie_browser_show');
-    button.classList.add('movie_browser_hide');
     icon.src = './img/hide.svg';
-    appState.displayMovieBrowser = true;
+    movieBrowserIsDisplayed = true;
+    addEventListeners();
   };
 
   const isMobile = checkIsMobile();
   if (isMobile) {
     removeAllChildNodes('main');
-    removeMovieInfoNode();
   }
 
-  displayMovieBrowser ? hideMovieNavigation() : showMovieNavigation();
+  movieBrowserIsDisplayed ? hideMovieNavigation() : showMovieNavigation();
 };

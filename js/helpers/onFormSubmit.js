@@ -10,8 +10,6 @@ export const onFormSubmit = (event) => {
   const formContainer = document.getElementById('form__container');
   const formElements = [...formContainer.elements];
 
-  console.log('formElements', formElements);
-
   const newMovieData = formElements.map((element) => {
     const key = element.name;
     const value = element.value.trim();

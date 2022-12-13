@@ -1,10 +1,10 @@
-import { cleanMovieData } from "./movieData.js";
-import { renderMovieNav } from "./createElement/renderMovieNav/renderMovieNav.js";
-import { addEventListeners } from "./eventListeners.js";
-import { getDataFromStorage } from "./helpers/localStorage.js";
-import { renderMainNav } from "./createElement/createMainNav/renderMainNav.js";
-import { renderHomePage } from "./createElement/createHomePage/renderHomePage.js";
-import { checkIsMobile } from "./helpers/isMobile.js";
+import { cleanMovieData } from './movieData.js';
+import { renderMovieNav } from './createElement/renderMovieNav/renderMovieNav.js';
+import { addEventListeners } from './eventListeners.js';
+import { getDataFromStorage } from './helpers/localStorage.js';
+import { renderMainNav } from './createElement/createMainNav/renderMainNav.js';
+import { renderHomePage } from './createElement/createHomePage/renderHomePage.js';
+import { checkIsMobile } from './helpers/isMobile.js';
 
 const loadDesktopPage = () => {
   renderMainNav();
@@ -17,7 +17,7 @@ const loadDesktopPage = () => {
 const isMobile = checkIsMobile();
 isMobile ? loadMobilePage() : loadDesktopPage();
 
-setInterval(() => {
-  console.log("window.innerWidth", window.innerWidth);
-  console.log("window.innerHeight", window.innerHeight);
-}, 3000);
+// setInterval(() => {
+//   console.log("window.innerWidth", window.innerWidth);
+//   console.log("window.innerHeight", window.innerHeight);
+// }, 3000);
