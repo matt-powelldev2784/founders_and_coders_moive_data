@@ -60,6 +60,7 @@
   background: none;
   cursor: pointer;
   overflow: visible;
+  text-align: center;
 }
 
 .nav__button_menu_icon {
@@ -128,4 +129,8 @@
   .nav_sort_pulldown_arrow {
     display: none;
   }
+}
+
+.nav_sort_pulldown_arrow_HIDE {
+  display: none;
 }

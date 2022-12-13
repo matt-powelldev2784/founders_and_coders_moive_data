@@ -3,6 +3,8 @@ import { renderMovieNav } from './domManipulation/renderMovieNav.js'
 import { addEventListeners } from './eventListeners.js'
 import { getDataFromStorage } from './helpers/localStorage.js'
 import { checkIsMobileOnStart } from './helpers/isMobile.js'
+import { createMainNav } from './domManipulation/createElement/createMainNav/createMainNav.js'
+
 import { insertInitialHtmlFiles } from './domManipulation/insertHtmlFile/insertInitialHtmlFiles.js'
 
 const startSeq = async () => {
@@ -12,13 +14,14 @@ const startSeq = async () => {
 startSeq()
 
 const loadPage = () => {
+  createMainNav()
   checkIsMobileOnStart()
   getDataFromStorage()
   renderMovieNav(cleanMovieData)
   addEventListeners()
 }
 
-setInterval(() => {
-  console.log('window.innerWidth', window.innerWidth)
-  console.log('window.innerHeight', window.innerHeight)
-}, 3000)
+// setInterval(() => {
+//   console.log('window.innerWidth', window.innerWidth)
+//   console.log('window.innerHeight', window.innerHeight)
+// }, 3000)

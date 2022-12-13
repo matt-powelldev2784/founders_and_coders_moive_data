@@ -10,46 +10,49 @@ import { checkIsMobile } from '../helpers/isMobile.js'
 import { removeAllChildNodes } from './removeAllChildNodes.js'
 import { insertHtmlFile } from './insertHtmlFile/insertHtmlFile.js'
 import { homePageBgImage } from './insertHtmlFile/htmlFileProps.js'
+import appState from '../state/appState.js'
 
 export const toggleMovieNav = () => {
-  const button = document.getElementById('nav__button_text__hide_movie_browser')
-  const buttonClass = button.classList[1]
-  const icon = document.getElementById('nav__button_icon__hide')
+  const displayMovieBrowser = appState.displayMovieBrowser
+  const button = document.getElementById(
+    'nav__buttton_container__toggle_movie_browser'
+  )
+  const icon = document.getElementById('nav__button_icon__movie_browser')
+  const navButtonText = document.getElementById(
+    'nav__button_text__hide_movie_browser'
+  )
 
-  const hideMoiveNav = () => {
-    button.firstChild.remove()
+  const hideMovieNavigation = () => {
+    navButtonText.firstChild.remove()
     const text = document.createTextNode('Show Movie Browser')
-    button.appendChild(text)
+    navButtonText.appendChild(text)
     toggleClass(hideMovieNav)
     toggleClass(mainStretch)
-    button.classList.remove('hide')
-    button.classList.add('show')
+    button.classList.remove('movie_browser_hide')
+    button.classList.add('movie_browser_show')
     icon.src = './img/show.svg'
+    appState.displayMovieBrowser = false
   }
 
-  const showMoiveNav = () => {
-    button.firstChild.remove()
+  const showMovieNavigation = () => {
+    console.log('bbbb')
+    navButtonText.firstChild.remove()
     const text = document.createTextNode('Hide Movie Browser')
-    button.appendChild(text)
+    navButtonText.appendChild(text)
     toggleClass(displayMovieNav)
     toggleClass(mainShrink)
-    button.classList.remove('show')
-    button.classList.add('hide')
+    button.classList.remove('movie_browser_show')
+    button.classList.add('movie_browser_hide')
     icon.src = './img/hide.svg'
+    appState.displayMovieBrowser = true
   }
 
   const isMobile = checkIsMobile()
-
-  if (buttonClass === 'hide') {
-    hideMoiveNav()
+  if (isMobile) {
+    removeAllChildNodes('main')
+    removeMovieInfoNode()
+    insertHtmlFile(homePageBgImage)
   }
 
-  if (buttonClass === 'show') {
-    if (isMobile) {
-      removeAllChildNodes('main')
-      removeMovieInfoNode()
-      insertHtmlFile(homePageBgImage)
-    }
-    showMoiveNav()
-  }
+  displayMovieBrowser ? hideMovieNavigation() : showMovieNavigation()
 }

@@ -1,29 +1,16 @@
-import { toggleMovieNav } from './domManipulation/toggleMoiveNav.js'
-import { onFormSubmit } from './helpers/onFormSubmit.js'
 import { renderMoiveInfo } from './domManipulation/renderMovieInfo.js'
 import {
   navigationLeft,
   navigationRight,
 } from './domManipulation/moiveNavButtons.js'
 import { toggleSortMovieMenu } from './domManipulation/toogleSortMovieMenu.js'
+import { toggleMovieNav } from './domManipulation/toggleMoiveNav.js'
 import { sortField } from './helpers/sortMovies.js'
-import { insertAddMovieForm } from './domManipulation/insertAddMoiveForm.js'
-import { removeAllChildNodes } from './domManipulation/removeAllChildNodes.js'
-import { toggleClass } from './toogleClass/toogleClass.js'
-import { hideMovieNav, mainStretch } from './toogleClass/classProps.js'
+import { toggleMovieForm } from './helpers/toggleMovieForm.js'
 
 export const addEventListeners = () => {
   const addMovie = document.getElementById('nav__buttton_container__add_moive')
-  addMovie.addEventListener('click', async () => {
-    removeAllChildNodes('main')
-    await insertAddMovieForm()
-    toggleClass(mainStretch)
-    toggleClass(hideMovieNav)
-    toggleMovieNav()
-
-    const form = document.getElementById('form__container')
-    form.addEventListener('submit', onFormSubmit)
-  })
+  addMovie.addEventListener('click', toggleMovieForm)
 
   const toggleMoiveBrowser = document.getElementById(
     'nav__buttton_container__toggle_movie_browser'

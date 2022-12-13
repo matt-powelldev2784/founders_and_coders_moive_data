@@ -6,7 +6,6 @@ export const checkIsMobileOnStart = () => {
   const isMobile = window.innerWidth < 451 ? true : false
 
   if (isMobile) {
-    //toggleClass(hideMovieNav)
     toggleClass(mainStretch)
     toggleMovieNav()
   }
