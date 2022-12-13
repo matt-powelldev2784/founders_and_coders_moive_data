@@ -1,5 +1,5 @@
 import { cleanMovieData } from "../movieData.js";
-import { renderMovieNav } from "./renderMovieNav.js";
+import { renderMovieNav } from "../domManipulation/createElement/renderMovieNav/renderMovieNav.js";
 import { refreshMoviesNavEventListeners } from "../eventListeners.js";
 
 export const navigationRight = () => {

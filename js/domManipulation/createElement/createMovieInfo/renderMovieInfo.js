@@ -2,8 +2,8 @@ import { cleanMovieData } from "../../../movieData.js";
 import { toggleClass } from "../../../toogleClass/toogleClass.js";
 import { mainStretch } from "../../../toogleClass/classProps.js";
 import { checkIsMobile } from "../../../helpers/isMobile.js";
-import { toggleMovieNav } from "../../toggleMoiveNav.js";
-import { removeAllChildNodes } from "../../removeAllChildNodes.js";
+import { toggleMovieNav } from "../../../helpers/toggleMoiveNav.js";
+import { removeAllChildNodes } from "../../../helpers/removeAllChildNodes.js";
 import { createMovieInfoElements } from "./createMovieInfoElements.js";
 
 export const renderMoiveInfo = (event) => {

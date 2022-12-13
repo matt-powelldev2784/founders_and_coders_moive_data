@@ -1,6 +1,6 @@
 import { toggleClass } from "../toogleClass/toogleClass.js";
 import { hideMovieNav, displayMovieNav, mainStretch, mainShrink } from "../toogleClass/classProps.js";
-import { checkIsMobile } from "../helpers/isMobile.js";
+import { checkIsMobile } from "./isMobile.js";
 import { removeAllChildNodes } from "./removeAllChildNodes.js";
 import appState from "../state/appState.js";
 

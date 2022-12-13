@@ -1,4 +1,4 @@
-import { removeAllChildNodes } from "./removeAllChildNodes.js";
+import { removeAllChildNodes } from "../../../helpers/removeAllChildNodes.js";
 
 export const renderMovieNav = (movies) => {
   removeAllChildNodes("movie_nav__card_container");

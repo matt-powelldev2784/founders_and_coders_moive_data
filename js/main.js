@@ -1,5 +1,5 @@
 import { cleanMovieData } from "./movieData.js";
-import { renderMovieNav } from "./domManipulation/renderMovieNav.js";
+import { renderMovieNav } from "./domManipulation/createElement/renderMovieNav/renderMovieNav.js";
 import { addEventListeners } from "./eventListeners.js";
 import { getDataFromStorage } from "./helpers/localStorage.js";
 import { renderMainNav } from "./domManipulation/createElement/createMainNav/renderMainNav.js";
