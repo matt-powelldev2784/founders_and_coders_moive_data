@@ -3,7 +3,7 @@ import { renderMovieNav } from "./domManipulation/renderMovieNav.js";
 import { addEventListeners } from "./eventListeners.js";
 import { getDataFromStorage } from "./helpers/localStorage.js";
 import { renderMainNav } from "./domManipulation/createElement/createMainNav/renderMainNav.js";
-import { renderHomePage } from "./domManipulation/createElement/homePage/renderHomePage.js";
+import { renderHomePage } from "./domManipulation/createElement/createHomePage/renderHomePage.js";
 import { checkIsMobile } from "./helpers/isMobile.js";
 
 const loadDesktopPage = () => {
