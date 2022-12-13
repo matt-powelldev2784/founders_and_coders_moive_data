@@ -5,7 +5,6 @@ import {
   mainStretch,
   mainShrink,
 } from '../toogleClass/classProps.js'
-import { removeMovieInfoNode } from './renderMovieInfo.js'
 import { checkIsMobile } from '../helpers/isMobile.js'
 import { removeAllChildNodes } from './removeAllChildNodes.js'
 import appState from '../state/appState.js'

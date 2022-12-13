@@ -1,4 +1,4 @@
-import { renderMoiveInfo } from './domManipulation/renderMovieInfo.js'
+import { renderMoiveInfo } from './domManipulation/createElement/createMovieInfo/renderMovieInfo.js'
 import {
   navigationLeft,
   navigationRight,

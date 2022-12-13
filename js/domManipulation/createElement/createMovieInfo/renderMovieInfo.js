@@ -1,19 +1,11 @@
-import { cleanMovieData } from '../movieData.js'
-import { toggleClass } from '../toogleClass/toogleClass.js'
-import { mainStretch } from '../toogleClass/classProps.js'
-import { checkIsMobile } from '../helpers/isMobile.js'
-import { toggleMovieNav } from './toggleMoiveNav.js'
-import { removeAllChildNodes } from './removeAllChildNodes.js'
-
-export const removeMovieInfoNode = () => {
-  const movieNode = document.getElementsByClassName('large_card')[0]
-  if (movieNode) {
-    movieNode.remove()
-  }
-}
+import { cleanMovieData } from '../../../movieData.js'
+import { toggleClass } from '../../../toogleClass/toogleClass.js'
+import { mainStretch } from '../../../toogleClass/classProps.js'
+import { checkIsMobile } from '../../../helpers/isMobile.js'
+import { toggleMovieNav } from '../../toggleMoiveNav.js'
+import { removeAllChildNodes } from '../../removeAllChildNodes.js'
 
 export const renderMoiveInfo = (event) => {
-  removeMovieInfoNode()
   removeAllChildNodes('main')
   const isMobile = checkIsMobile()
   if (isMobile) {
