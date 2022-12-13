@@ -28,8 +28,6 @@ export const onFormSubmit = (event) => {
   const key = cleanMovieData.length
   newMovie.key = key
 
-  console.log('newMovie', newMovie)
-
   cleanMovieData.unshift(newMovie)
   injectUploadedImage()
   formContainer.reset()

@@ -2,21 +2,20 @@ import { cleanMovieData } from './movieData.js'
 import { renderMovieNav } from './domManipulation/renderMovieNav.js'
 import { addEventListeners } from './eventListeners.js'
 import { getDataFromStorage } from './helpers/localStorage.js'
-import { checkIsMobileOnStart } from './helpers/isMobile.js'
-import { createMainNav } from './domManipulation/createElement/createMainNav/createMainNav.js'
+import { renderMainNav } from './domManipulation/createElement/createMainNav/renderMainNav.js'
 import { renderHomePage } from './domManipulation/createElement/homePage/renderHomePage.js'
+import { checkIsMobile } from './helpers/isMobile.js'
 
-const loadPage = () => {
-  createMainNav()
+const loadDesktopPage = () => {
+  renderMainNav()
   renderHomePage()
-
-  checkIsMobileOnStart()
   getDataFromStorage()
   renderMovieNav(cleanMovieData)
   addEventListeners()
 }
 
-loadPage()
+const isMobile = checkIsMobile()
+isMobile ? loadMobilePage() : loadDesktopPage()
 
 // setInterval(() => {
 //   console.log('window.innerWidth', window.innerWidth)

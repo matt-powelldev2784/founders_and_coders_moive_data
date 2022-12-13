@@ -5,7 +5,7 @@ import { addMovieBrowserButton } from './buttons/addMovieBrowserButton.js'
 import { createNavButton } from './createNavButton.js'
 import { createSortDropDownMenu } from './buttons/createSortDropDownMenu.js'
 
-export const createMainNav = () => {
+export const renderMainNav = () => {
   const addMovieBtn = addMovieButton
   const movieBrowserBtn = addMovieBrowserButton
 

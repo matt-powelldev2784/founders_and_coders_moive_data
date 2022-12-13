@@ -4,7 +4,6 @@ import { createHomeText } from './createHomeText.js'
 
 export const renderHomePage = () => {
   const mainContainer = document.getElementById('main')
-  console.log('mainContainer', mainContainer)
 
   const backgroundImage = createHomeBgImage()
   const homeText = createHomeText()
