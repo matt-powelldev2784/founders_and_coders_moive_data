@@ -1,23 +1,23 @@
-import { cleanMovieData } from "../movieData.js";
-import { toggleClass } from "../toogleClass/toogleClass.js";
-import { mainShrink } from "../toogleClass/classProps.js";
-import { injectUploadedImage } from "./injectUploadedImage.js";
-import { removeAllChildNodes } from "./removeAllChildNodes.js";
-import { toggleMovieNav } from "./toggleMoiveNav.js";
+import { cleanMovieData } from '../movieData.js';
+import { toggleClass } from '../toogleClass/toogleClass.js';
+import { mainShrink } from '../toogleClass/classProps.js';
+import { injectUploadedImage } from './injectUploadedImage.js';
+import { removeAllChildNodes } from './removeAllChildNodes.js';
+import { toggleMovieNav } from './toggleMoiveNav.js';
 
 export const onFormSubmit = (event) => {
   event.preventDefault();
-  const formContainer = document.getElementById("form__container");
+  const formContainer = document.getElementById('form__container');
   const formElements = [...formContainer.elements];
 
-  console.log("formElements", formElements);
+  console.log('formElements', formElements);
 
   const newMovieData = formElements.map((element) => {
     const key = element.name;
     const value = element.value.trim();
 
-    if (key === "cast") {
-      const value = element.value.split(",");
+    if (key === 'cast') {
+      const value = element.value.split(',');
       return [key, value];
     }
 
@@ -31,7 +31,7 @@ export const onFormSubmit = (event) => {
   cleanMovieData.unshift(newMovie);
   injectUploadedImage();
   formContainer.reset();
-  removeAllChildNodes("main");
+  removeAllChildNodes('main');
   toggleClass(mainShrink);
   toggleMovieNav();
 };

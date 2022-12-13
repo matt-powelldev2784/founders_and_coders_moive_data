@@ -1,4 +1,4 @@
-import { renderMoiveInfo } from "./domManipulation/createElement/createMovieInfo/renderMovieInfo.js";
+import { renderMoiveInfo } from "./createElement/createMovieInfo/renderMovieInfo.js";
 import { navigationLeft, navigationRight } from "./helpers/movieNavigation.js";
 import { toggleSortMovieMenu } from "./helpers/toogleSortMovieMenu.js";
 import { toggleMovieNav } from "./helpers/toggleMoiveNav.js";

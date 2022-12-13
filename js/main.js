@@ -1,9 +1,9 @@
 import { cleanMovieData } from "./movieData.js";
-import { renderMovieNav } from "./domManipulation/createElement/renderMovieNav/renderMovieNav.js";
+import { renderMovieNav } from "./createElement/renderMovieNav/renderMovieNav.js";
 import { addEventListeners } from "./eventListeners.js";
 import { getDataFromStorage } from "./helpers/localStorage.js";
-import { renderMainNav } from "./domManipulation/createElement/createMainNav/renderMainNav.js";
-import { renderHomePage } from "./domManipulation/createElement/createHomePage/renderHomePage.js";
+import { renderMainNav } from "./createElement/createMainNav/renderMainNav.js";
+import { renderHomePage } from "./createElement/createHomePage/renderHomePage.js";
 import { checkIsMobile } from "./helpers/isMobile.js";
 
 const loadDesktopPage = () => {
