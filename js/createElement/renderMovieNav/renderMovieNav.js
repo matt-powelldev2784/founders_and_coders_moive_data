@@ -1,4 +1,5 @@
 import { removeAllChildNodes } from '../../helpers/removeAllChildNodes.js';
+import { createElement } from '../createElement.js';
 
 export const renderMovieNav = (movies) => {
   removeAllChildNodes('movie_nav__card_container');
@@ -6,46 +7,23 @@ export const renderMovieNav = (movies) => {
   movies.forEach((movie) => {
     const { key, title, year, image } = movie;
 
-    //create card node
-    const card = document.createElement('article');
-    card.classList.add('movie_nav__card');
-    card.setAttribute('id', `movie_nav__card__${key}`);
+    // create elements
+    const img = createElement('img', {
+      class: 'moive_nav__img',
+      id: `moive_nav__img_${key}`,
+      src: image,
+      alt: `Moive Image ${title}`,
+    });
 
-    //creat anchor node
-    const anchor = document.createElement('a');
-    anchor.setAttribute('href', '#');
+    const movieYear = createElement('p', { class: 'moive_nav__film_year' }, year);
+    const movieTitle = createElement('p', { class: 'moive_nav__title' }, title);
+    const movieInfo = createElement('div', { class: 'moive_nav_info' }, movieTitle, movieYear);
 
-    //create image node
-    const img = document.createElement('img');
-    img.classList.add('moive_nav__img');
-    img.setAttribute('id', `moive_nav__img_${key}`);
-    img.setAttribute('src', image);
-    img.setAttribute('alt', `Moive Image ${title}`);
+    const anchor = createElement('a', { href: '#' }, img, movieInfo);
 
-    //create movie info node
-    const moiveInfo = document.createElement('div');
-    moiveInfo.classList.add('moive_nav_info');
+    const card = createElement('article', { class: 'movie_nav__card', id: `movie_nav__card__${key}` }, anchor);
 
-    //create movie title node
-    const movieTitle = document.createElement('p');
-    movieTitle.classList.add('moive_nav__title');
-    const titleTextNode = document.createTextNode(title);
-    movieTitle.appendChild(titleTextNode);
-
-    //create movie year node
-    const movieYear = document.createElement('p');
-    movieYear.classList.add('moive_nav__film_year');
-    const movieYearTextNode = document.createTextNode(year);
-    movieYear.appendChild(movieYearTextNode);
-
-    //add nodes to card
-    card.appendChild(anchor);
-    anchor.appendChild(img);
-    moiveInfo.appendChild(movieTitle);
-    moiveInfo.appendChild(movieYear);
-    anchor.appendChild(moiveInfo);
-
-    //add nodes to dom
+    //render movie nav
     const movieNavContainer = document.getElementById('movie_nav__card_container');
     movieNavContainer.appendChild(card);
   });
