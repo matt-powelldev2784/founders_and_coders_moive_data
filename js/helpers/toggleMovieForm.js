@@ -1,4 +1,4 @@
-import { toggleMovieNav } from './toggleMoiveNav.js';
+import { toggleMovieNav } from './toggleMovieNav.js';
 import { renderMovieForm } from '../createElement/createMovieForm/renderMovieForm.js';
 import { removeAllChildNodes } from './removeAllChildNodes.js';
 import { toggleClass } from '../toogleClass/toogleClass.js';

@@ -3,7 +3,7 @@ import { toggleClass } from '../toogleClass/toogleClass.js';
 import { mainShrink } from '../toogleClass/classProps.js';
 import { injectUploadedImage } from './injectUploadedImage.js';
 import { removeAllChildNodes } from './removeAllChildNodes.js';
-import { toggleMovieNav } from './toggleMoiveNav.js';
+import { toggleMovieNav } from './toggleMovieNav.js';
 
 export const onFormSubmit = (event) => {
   event.preventDefault();

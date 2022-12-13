@@ -2,7 +2,7 @@ import { cleanMovieData } from '../../movieData.js';
 import { toggleClass } from '../../toogleClass/toogleClass.js';
 import { mainStretch } from '../../toogleClass/classProps.js';
 import { checkIsMobile } from '../../helpers/isMobile.js';
-import { toggleMovieNav } from '../../helpers/toggleMoiveNav.js';
+import { toggleMovieNav } from '../../helpers/toggleMovieNav.js';
 import { removeAllChildNodes } from '../../helpers/removeAllChildNodes.js';
 import { createMovieInfoElements } from './createMovieInfoElements.js';
 
