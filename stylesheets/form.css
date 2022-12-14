@@ -8,6 +8,11 @@
   border-radius: 1rem;
   color: white;
 }
+@media only screen and (max-width: 451px) {
+  .form__container {
+    margin: 1rem auto 5rem auto;
+  }
+}
 
 .form_play_img {
   display: block;
