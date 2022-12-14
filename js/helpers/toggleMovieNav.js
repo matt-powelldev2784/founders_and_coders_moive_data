@@ -41,6 +41,7 @@ export const toggleMovieNav = () => {
 
     if (isMobile) {
       removeAllChildNodes('main');
+      renderBgImage();
     }
   };
 
