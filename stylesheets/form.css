@@ -9,9 +9,6 @@
   border-radius: 1rem;
   color: white;
 }
-.form__container_HIDE {
-  display: none;
-}
 
 .form_input__container {
   position: relative;

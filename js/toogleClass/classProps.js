@@ -31,7 +31,7 @@ const classProps = {
     display: false,
     append: '_HIDE',
   },
-}
+};
 
 export const {
   displayMovieNav,
@@ -48,4 +48,4 @@ export const {
   hideSortMoviesMenu,
   displaySortMoviesArrow,
   hideSortMoviesArrow,
-} = classProps
+} = classProps;
