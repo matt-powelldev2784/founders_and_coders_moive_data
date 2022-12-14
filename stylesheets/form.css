@@ -1,11 +1,9 @@
 .form__container {
   position: relative;
   display: block;
-  top: 50%;
-  transform: translateY(-50%);
   width: 90%;
   background: #12192c;
-  margin: auto;
+  margin: 2rem auto;
   border-radius: 1rem;
   color: white;
 }

@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   overflow: hidden;
 }
@@ -57,6 +57,7 @@ body {
   background: #171e31;
   height: 100%;
   width: 100vw;
+  overflow-y: scroll;
 }
 .main__fullscreen {
   position: relative;
