@@ -4,9 +4,13 @@ import { removeAllChildNodes } from './removeAllChildNodes.js';
 import { toggleClass } from '../toogleClass/toogleClass.js';
 import { mainStretch } from '../toogleClass/classProps.js';
 import { onFormSubmit } from './onFormSubmit.js';
+import { movieBrowserIsDisplayed } from './toggleMovieNav.js';
 
 export const toggleMovieForm = () => {
-  toggleMovieNav();
+  if (movieBrowserIsDisplayed) {
+    toggleMovieNav();
+  }
+
   removeAllChildNodes('main');
   toggleClass(mainStretch);
   renderMovieForm();

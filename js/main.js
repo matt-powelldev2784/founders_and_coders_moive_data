@@ -27,7 +27,7 @@ const loadMobilePage = () => {
 const isMobile = checkIsMobile();
 isMobile ? loadMobilePage() : loadDesktopPage();
 
-// setInterval(() => {
-//   console.log("window.innerWidth", window.innerWidth);
-//   console.log("window.innerHeight", window.innerHeight);
-// }, 3000);
+setInterval(() => {
+  console.log('window.innerWidth', window.innerWidth);
+  console.log('window.innerHeight', window.innerHeight);
+}, 3000);
