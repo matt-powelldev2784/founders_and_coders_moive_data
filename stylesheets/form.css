@@ -55,6 +55,7 @@
 .form_input__number {
   display: block;
   flex-grow: 1;
+  -webkit-flex-grow: 1;
   border: none;
   outline: none;
   background: #171e31;
