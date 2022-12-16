@@ -20,7 +20,7 @@ export const toggleMovieNav = () => {
     addMovieButton.after(addShowMovieBrowserButton);
     toggleClass(hideMovieNav);
     toggleClass(mainStretch);
-    icon.src = './img/show.svg';
+    icon.src = './img/hide.svg';
     movieBrowserIsDisplayed = false;
     addEventListeners();
 
@@ -35,7 +35,7 @@ export const toggleMovieNav = () => {
     addMovieButton.after(addHideMovieBrowserButton);
     toggleClass(displayMovieNav);
     toggleClass(mainShrink);
-    icon.src = './img/hide.svg';
+    icon.src = './img/show.svg';
     movieBrowserIsDisplayed = true;
     addEventListeners();
 
