@@ -19,7 +19,7 @@ export const renderMovieNav = (movies) => {
     const movieTitle = createElement('p', { class: 'moive_nav__title' }, title);
     const movieInfo = createElement('div', { class: 'moive_nav_info' }, movieTitle, movieYear);
 
-    const anchor = createElement('a', { href: '#' }, img, movieInfo);
+    const anchor = createElement('a', { class: 'movie_nav__link', href: '#' }, img, movieInfo);
 
     const card = createElement('article', { class: 'movie_nav__card', id: `movie_nav__card__${key}` }, anchor);
 

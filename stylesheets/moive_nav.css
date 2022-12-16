@@ -30,8 +30,7 @@
   position: relative;
   display: block;
   height: 15rem;
-  width: 20rem;
-  margin: 1rem 2rem;
+  margin: 1rem 5rem;
 }
 
 .moive_nav__img {
@@ -39,7 +38,7 @@
   clip-path: circle(50% at 50% 50%);
   width: 8rem;
   height: 8rem;
-  margin: 0.25rem auto;
+  margin: 0.25rem 1rem;
   object-fit: cover;
 }
 
