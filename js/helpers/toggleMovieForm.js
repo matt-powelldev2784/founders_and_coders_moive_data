@@ -15,6 +15,16 @@ export const toggleMovieForm = () => {
   toggleClass(mainStretch);
   renderMovieForm();
 
+  const addMovieFilPicker = document.getElementById('form__image_upload');
+  addMovieFilPicker.addEventListener('change', (event) => {
+    const file = event.target.files[0].name;
+
+    const fileNameElement = document.getElementById('form__input_file_text');
+    fileNameElement.textContent = file;
+
+    console.log('file', file);
+  });
+
   const form = document.getElementById('form__container');
   form.addEventListener('submit', onFormSubmit);
 };

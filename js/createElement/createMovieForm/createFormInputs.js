@@ -35,7 +35,11 @@ export const createFormInputs = () => {
     alt: 'Upload image',
   });
 
-  const fileLabelText = createElement('p', { class: 'form__input_file_text' }, 'Add image...');
+  const fileLabelText = createElement(
+    'p',
+    { class: 'form__input_file_text', id: 'form__input_file_text' },
+    'Add image...'
+  );
 
   const file = createFormInput('input', {
     type: 'file',
