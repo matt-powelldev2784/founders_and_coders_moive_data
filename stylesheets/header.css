@@ -13,7 +13,12 @@
 .header__logo {
   height: 2rem;
   width: auto;
-  margin: 0rem 1rem;
+  margin: 0.25rem 1rem;
+}
+@media only screen and (max-width: 451px) {
+  .header__logo {
+    margin: 0.1rem auto;
+  }
 }
 
 .nav__flexbox {
@@ -23,39 +28,20 @@
   justify-content: flex-end;
   gap: 1.5rem;
   float: right;
-  margin: 0rem 1rem;
-  padding: 0.5rem;
-  min-width: 320px;
+  margin: 0.25rem 1rem;
+  min-width: 310px;
   overflow: visible;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 451px) {
   .nav__flexbox {
-    width: 95%;
-    justify-content: center;
-    margin: 0;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .nav__flexbox {
-    height: 3.6rem;
-    align-items: flex-start;
-  }
-}
-@media only screen and (max-width: 414px) {
-  .nav__flexbox {
-    height: 4.1rem;
-  }
-}
-@media only screen and (max-width: 398px) {
-  .nav__flexbox {
-    height: 4.6rem;
+    gap: 0rem;
+    margin: 0.2rem 1rem;
   }
 }
 
 .nav__buttton_container {
   position: relative;
   display: block;
-  height: 1.5rem;
   border: none;
   background: none;
   cursor: pointer;
@@ -76,27 +62,18 @@
 .nav__button_text_wrapper {
   position: relative;
   display: inline-block;
-  height: 1.5rem;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.2rem);
   font-weight: 400;
   color: white;
-}
-@media only screen and (max-width: 414px) {
-  .nav__button_text_wrapper {
-    height: 2.5rem;
-  }
-}
-
-.nav__button_text {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  padding: 0 0.4rem;
 }
 
 .nav__button_text__dropdown_container {
-  position: relative;
+  position: absolute;
   display: block;
+  width: 100%;
   background: #12192c;
+  overflow: visible;
   z-index: 999;
 }
 
@@ -111,7 +88,7 @@
   position: relative;
   display: block;
   color: white;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.2rem);
   font-weight: 400;
   margin: 0.5rem;
   z-index: 999;
@@ -120,7 +97,7 @@
 .nav_sort_pulldown_arrow {
   display: block;
   position: absolute;
-  top: 100%;
+  top: 90%;
   left: 50%;
   right: 0.5rem;
   width: 0.7rem;
