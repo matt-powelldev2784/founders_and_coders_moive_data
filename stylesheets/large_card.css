@@ -17,14 +17,14 @@
   width: 50%;
   height: 100%;
   float: right;
-  background-image: linear-gradient(to left, transparent, #171e31);
+  background-image: linear-gradient(to left, transparent 0%, transparent 70%, #171e31 100%);
   z-index: 1;
 }
 @media only screen and (max-width: 992px) {
   .large_card__img_gradient {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, transparent, #171e31);
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 70%, #171e31 100%);
   }
 }
 @media only screen and (max-width: 451px) {
@@ -49,6 +49,7 @@
     height: 100%;
     background-size: cover;
     background-position: top;
+    clip-path: unset;
   }
 }
 
