@@ -4,6 +4,7 @@ import { mainShrink } from '../toogleClass/classProps.js';
 import { injectUploadedImage } from './injectUploadedImage.js';
 import { removeAllChildNodes } from './removeAllChildNodes.js';
 import { toggleMovieNav } from './toggleMovieNav.js';
+import { renderHomePage } from '../createElement/createHomePage/renderHomePage.js';
 
 export const onFormSubmit = (event) => {
   event.preventDefault();
@@ -32,4 +33,5 @@ export const onFormSubmit = (event) => {
   removeAllChildNodes('main');
   toggleClass(mainShrink);
   toggleMovieNav();
+  renderHomePage();
 };

@@ -18,12 +18,7 @@ const movieData = {
   'Fantastic Mr. Fox': {
     year: 2009,
     plot: "An urbane fox cannot resist returning to his farm raiding ways and then must help his community survive the farmers' retaliation.",
-    cast: [
-      'George Clooney',
-      'Meryl Streep',
-      'Bill Murray',
-      'Jason Schwartzman',
-    ],
+    cast: ['George Clooney', 'Meryl Streep', 'Bill Murray', 'Jason Schwartzman'],
     runtime: 147,
     rating: 7.9,
     image: './img/03_fantastic_mr_fox.jpg',
@@ -36,10 +31,10 @@ const movieData = {
     cast: ['Ralph Fiennes', 'F. Murray Abraham', 'Mathieu Amalric'],
     image: './img/04_budapest_hotel.jpg',
   },
-}
+};
 
-const movieDataArray = Object.entries(movieData)
-export let cleanMovieData = []
+const movieDataArray = Object.entries(movieData);
+export let cleanMovieData = [];
 
 movieDataArray.forEach((movie, key) => {
   const cleanMovie = {
@@ -51,10 +46,10 @@ movieDataArray.forEach((movie, key) => {
     rating: movie[1].rating,
     year: movie[1].year,
     image: movie[1].image,
-  }
-  cleanMovieData.push(cleanMovie)
-})
+  };
+  cleanMovieData.push(cleanMovie);
+});
 
 export const setCleanMoiveData = (movieData) => {
-  cleanMovieData = movieData
-}
+  cleanMovieData = movieData;
+};
