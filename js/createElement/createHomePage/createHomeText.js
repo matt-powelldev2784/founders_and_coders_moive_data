@@ -8,22 +8,13 @@ export const createHomeText = () => {
 
   const textHeaderDiv = createElement('div', { class: 'homepage_text__header_div' }, h1, h2);
 
-  const article = createElement(
-    'article',
-    {
-      class: 'homepage_text__flexbox',
-      id: 'homepage_text__flexbox',
-    },
-    textHeaderDiv
-  );
-
   const section = createElement(
     'section',
     {
       class: 'homepage_text',
       id: 'homepage_text',
     },
-    article
+    textHeaderDiv
   );
 
   return section;
