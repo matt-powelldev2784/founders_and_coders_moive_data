@@ -24,6 +24,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  max-width: 92%;
+  margin: 0 auto;
 }
 
 .movie_nav__card {
