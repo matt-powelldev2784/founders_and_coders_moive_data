@@ -2,6 +2,7 @@
   position: relative;
   display: block;
   width: 90%;
+  max-width: 60rem;
   background: var(--bg-darker-blue);
   margin: 2rem auto;
   padding: 1rem;
