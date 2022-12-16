@@ -50,7 +50,7 @@
   margin: 0 auto;
   font-size: 4rem;
   font-weight: 700;
-  color: white;
+  color: var(--text-primary-white);
 }
 @media only screen and (max-width: 451px) {
   .homepage_text__h1 {
@@ -61,7 +61,7 @@
 .homepage_text__h1_span {
   font-size: 4rem;
   font-weight: 700;
-  color: #4eb858;
+  color: var(--primary-green);
 }
 @media only screen and (max-width: 451px) {
   .homepage_text__h1_span {
@@ -70,7 +70,7 @@
 }
 
 .homepage_text__h2 {
-  color: #4eb858;
+  color: var(--primary-green);
   font-size: 1.4rem;
 }
 @media only screen and (max-width: 451px) {

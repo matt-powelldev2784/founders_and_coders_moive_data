@@ -64,7 +64,7 @@
   display: inline-block;
   font-size: clamp(1.1rem, 2.5vw, 1.2rem);
   font-weight: 400;
-  color: white;
+  color: var(--text-primary-white);
   padding: 0 0.4rem;
 }
 
@@ -72,22 +72,22 @@
   position: absolute;
   display: block;
   width: 100%;
-  background: #12192c;
+  background: var(--bg-darker-blue);
   overflow: visible;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .nav__button_text__dropdown_container_HIDE {
   position: relative;
   display: none;
-  background: #12192c;
+  background: var(--bg-darker-blue);
   z-index: 999;
 }
 
 .nav__button_text__dropdown {
   position: relative;
   display: block;
-  color: white;
+  color: var(--text-primary-white);
   font-size: clamp(1.1rem, 2.5vw, 1.2rem);
   font-weight: 400;
   margin: 0.5rem;
